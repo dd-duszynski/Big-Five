@@ -1,0 +1,32 @@
+.tableHeading,
+.tableRowItems{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 20px 220px repeat(6, 1fr);
+    grid-template-areas: 
+    "position teamName playedGames won draw lost goals points";
+    font-weight: 900;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+}
+.tableHeading{
+    background-color: #018786;
+}
+.tableRowItems {
+    background-color: #01bab8;
+}
+.tableRowItems:hover{
+    background-color: green;
+}
+.tableHeading th{
+    font-size: 1.5rem;
+}
+.tableRowItems td {
+	font-size: 1.3rem;
+}
+.tableHeading th:nth-child(2),
+.tableRowItems td:nth-child(2){
+    justify-self: start;
+    padding-left: 10px;
+}

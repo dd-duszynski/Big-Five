@@ -1,0 +1,45 @@
+.menu_footer, .menu_footerDark {
+	height: 45px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.menu_footer {
+	background-color: #017877;
+}
+.menu_footerDark {
+	background-color: black;
+}
+.settings,
+.contact,
+.info,
+.settingsActive,
+.contactActive,
+.infoActive {
+	background-size: 27px 27px;
+	height: 27px;
+	width: 27px;
+	background-image: url("../../../assets/icons/settings.png");
+}
+.settings {
+	background-image: url("../../../assets/icons/settings.png");
+}
+.contact {
+	background-image: url("../../../assets/icons/mail.png");
+}
+.info {
+	background-image: url("../../../assets/icons/info.png");
+}
+.settings:hover,
+.settingsActive {
+	background-image: url("../../../assets/icons/settingsActive.png");
+}
+.contact:hover,
+.contactActive {
+	background-image: url("../../../assets/icons/mailActive.png");
+}
+.info:hover,
+.infoActive {
+	background-image: url("../../../assets/icons/infoActive.png");
+}

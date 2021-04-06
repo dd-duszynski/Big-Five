@@ -1,0 +1,56 @@
+.info {
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.infoItem {
+    width: auto;
+    margin: 10px auto;
+}
+.infoLink {
+    font-size: 1.6rem;
+	color: white;
+	font-weight: 900;
+	text-decoration: none;
+    display: grid;
+    grid-template-columns: 40px 250px;
+    align-items: center;
+}
+.infoLink:hover {
+    color: #018786;
+}
+.line {
+    margin: 20px auto;
+    border-top: 2px solid white;
+    width: 50%;
+}
+.icon{
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.icon_author{
+    background-image: url("../../assets/icons/mail.png");
+}
+.icon_database{
+    background-image: url("../../assets/icons/database.png");
+}
+.icon_author{
+    background-image: url("../../assets/icons/author.png");
+}
+.icon_email{
+   background-image: url("../../assets/icons/mail.png");
+}
+.icon_github{
+   background-image: url("../../assets/icons/github.png");
+}
+.icon_linkedin{
+   background-image: url("../../assets/icons/linkedin.png");
+}
+.icon_linkedin:hover{
+   background-image: url("../../assets/icons/linkedin.png");
+}

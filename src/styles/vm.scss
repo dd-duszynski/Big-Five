@@ -1,0 +1,6 @@
+@mixin mainSectionHeight {
+   height: calc(100vh - 80px);
+   min-height: 100%;
+   overflow-x: hidden;
+   overflow-y: auto;
+}

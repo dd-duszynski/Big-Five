@@ -1,0 +1,53 @@
+.MainSwitch {
+	grid-column: 2/3;
+	position: relative;
+}
+.imgContainer,
+.imgContainerDark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+.imgContainer {
+	background-color: #03dac6;
+}
+.imgContainerDark {
+	background-color: black;
+}
+.imgContainerDark .backgroundImage{
+   opacity: 0.18;
+}
+.backgroundImage {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	content: "";
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.08;
+}
+.img1 {
+	background-image: url("../../../src/assets/img/img1.jpg");
+}
+.img2 {
+	background-image: url("../../../src/assets/img/img2.jpg");
+}
+.img3 {
+	background-image: url("../../../src/assets/img/img3.jpg");
+}
+.img4 {
+	background-image: url("../../../src/assets/img/img4.jpg");
+}
+.img5 {
+	background-image: url("../../../src/assets/img/img5.jpg");
+}
+.img6 {
+	background-image: url("../../../src/assets/img/img6.jpg");
+}
+.img7 {
+	background-image: url("../../../src/assets/img/img7.jpg");
+}

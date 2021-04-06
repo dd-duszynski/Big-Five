@@ -1,0 +1,25 @@
+@import "../../styles/vm.scss";
+
+.menu,
+.menuDark {
+   @include mainSectionHeight;
+   grid-column: 1/2;
+   position: relative;
+   width: 240px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.menu {
+   background-color: #018786;
+}
+
+.menuDark {
+   background-color: black;
+}
+
+.menu_nav {
+   display: flex;
+   flex-direction: column;
+}

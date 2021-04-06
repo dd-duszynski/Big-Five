@@ -1,0 +1,51 @@
+.miniTableHeading,
+.miniTableHeadingDark,
+.miniTableItem,
+.miniTableItemDark {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 20px 220px repeat(6, 1fr);
+    grid-template-areas: 
+    "position teamName playedGames won draw lost goals points";
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+}
+.miniTableHeading{
+   background-color: #018786;
+}
+.miniTableHeadingDark{
+   background-color: #2f4f4f;
+}
+.miniTableHeading:hover{
+    background-color: green;
+}
+.miniTableHeadingDark:hover{
+    background-color: #018786;
+}
+/* Itemy */
+.miniTableItem{
+      background-color: #01bab8;
+}
+.miniTableItemDark{
+      background-color: #01bab8;
+}
+.miniTableItem:hover,
+.miniTableItemDark:hover{
+    background-color: green;
+}
+
+.miniTableHeading th,
+.miniTableHeadingDark th{
+    font-size: 1.5rem;
+}
+.miniTableItem td,
+.miniTableItemDark td {
+    font-size: 1.3rem;
+}
+.miniTableHeading th:nth-child(2),
+.miniTableItem td:nth-child(2),
+.miniTableItemDark td:nth-child(2){
+    justify-self: start;
+    padding-left: 10px;
+}
