@@ -1,0 +1,58 @@
+@import "../../styles/vm.scss";
+
+.SwitchButtonLight,
+.SwitchButtonDark {
+   grid-column: 2/3;
+   position: relative;
+   width: 55px;
+   display: block;
+   cursor: pointer;
+   height: 20px;
+   padding: 0;
+   line-height: 20px;
+   border: 0px solid none;
+   border-radius: 30px;
+
+   &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      margin: -5px;
+      top: 0;
+      bottom: 0;
+      border-radius: 30px;
+   }
+}
+
+.left {
+   &:before {
+      right: 31px;
+   }
+}
+
+.right {
+   &:before {
+      right: 0;
+   }
+}
+
+.SwitchButtonDark {
+   background-color: $bgc-light;
+
+   &:before {
+      background: #ddd;
+   }
+
+}
+
+.SwitchButtonLight {
+   background-color: #ddd;
+
+   &:before {
+      background: $bgc-light;
+   }
+
+}
+

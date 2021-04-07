@@ -1,8 +1,9 @@
 @import "../../styles/vm.scss";
 
-.menu,
+.menuLight,
 .menuDark {
    @include mainSectionHeight;
+   @include noSelection;
    grid-column: 1/2;
    position: relative;
    width: 240px;
@@ -11,15 +12,15 @@
    justify-content: space-between;
 }
 
-.menu {
-   background-color: #018786;
+.menuLight {
+   background-color: $bgc-light;
 }
 
 .menuDark {
-   background-color: black;
+   background-color: $bgc-dark;
 }
 
-.menu_nav {
+.nav {
    display: flex;
    flex-direction: column;
 }

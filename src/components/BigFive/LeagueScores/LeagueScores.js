@@ -24,6 +24,7 @@ const LeagueScores = (props) => {
    const renderResults = () => {
       return <MiniTable scores={results} />
    }
+   
    const css = theme === "light" ? styles.LeagueScores : styles.LeagueScoresDark;
 
    return (

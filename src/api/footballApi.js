@@ -11,9 +11,9 @@ const fetchJsonFromAPI = url => {
    }
    return fetch("https://api.football-data.org/v2/" + url, options)
       .then(res => res.json())
-      .then(results => {
-         responseCache[url] = results;
-         return results;
+      .then(res => {
+         responseCache[url] = res;
+         return res;
       });
 };
 

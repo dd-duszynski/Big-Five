@@ -7,20 +7,18 @@ import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
 import MainSwitch from "../MainSwitch/MainSwitch";
 
-const localStorageLanguage = localStorage.getItem('language');
-const localStorageTheme = localStorage.getItem('theme');
+const localStorageLanguage = localStorage.getItem("language");
+const localStorageTheme = localStorage.getItem("theme");
 
-const browserLanguage = window.navigator.userLanguage || window.navigator.language;
-const browserLanguageShort = browserLanguage.substring(0, 2).toUpperCase();
-const browserlang = browserLanguageShort === "PL" ? "PL" : "EN";
-const appLanguage = localStorageLanguage !== null ? localStorageLanguage : browserlang;
-const appTheme = localStorageTheme !== null ? localStorageTheme : "light";
+const appLanguage =
+   localStorageLanguage === "PL" ? "PL" : "EN";
+const appTheme = localStorageTheme === "dark" ? "dark" : "light";
 
 const App = () => {
    return (
       <AppProvider appLanguage={appLanguage} appTheme={appTheme}>
          <BrowserRouter>
-            <div className={styles.app}>
+            <div className={styles.App}>
                <Header />
                <Menu />
                <MainSwitch />
@@ -28,7 +26,6 @@ const App = () => {
          </BrowserRouter>
       </AppProvider>
    );
-}
-
+};
 
 export default App;

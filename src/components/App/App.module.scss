@@ -1,6 +1,21 @@
-.app {
+.App {
 	font-family: "Roboto", sans-serif;
 	height: 100vh;
+	max-height: 100vh;
 	display: grid;
-	grid-template-columns: 240px 1fr;
+	grid-template-columns: 240px auto;
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 3px;
+		background: lightcyan;
+	}
+	::-webkit-scrollbar-track {
+		background-color: darkcyan;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: rgb(210, 247, 247);
+	}
 }
+

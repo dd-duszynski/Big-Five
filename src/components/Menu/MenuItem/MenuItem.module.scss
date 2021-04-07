@@ -1,0 +1,67 @@
+@import "../../../styles/vm.scss";
+
+.MenuItem {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 15px;
+}
+
+.listItem {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding: 4px 0;
+   margin-left: 47px;
+}
+
+.headerBox {
+   margin-left: 30px;
+}
+
+.header {
+   font-size: 1.6rem;
+   color: white;
+   font-weight: 900;
+   text-decoration: none;
+   padding: 4px 0;
+   margin-left: 15px;
+}
+
+.leagueLink {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 12px;
+   color: white;
+   font-weight: 900;
+   text-decoration: none;
+
+   &:hover {
+      color: $bgc-light-lighter;
+   }
+}
+
+.leagueLinkActive {
+   color: $bgc-light-lighter;
+}
+
+.icon_vs,
+.icon_tab,
+.icon_stat {
+   margin-right: 8px;
+   background-size: 20px 20px;
+   height: 20px;
+   width: 20px;
+}
+
+.icon_vs {
+   background-image: url(../../../assets/icons/icon_vs@2x.png);
+}
+
+.icon_tab {
+   background-image: url(../../../assets/icons/icon_tab@2x.png);
+}
+
+.icon_stat {
+   background-image: url(../../../assets/icons/icon_stat@2x.png);
+}

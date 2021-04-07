@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import styles from "./Settings.module.scss";
 import { AppContext } from "../../context/context";
-
+import SwitchButton from "../UI/SwitchButton"
 const Settings = () => {
    const {
       textContent,
@@ -11,50 +11,45 @@ const Settings = () => {
       themeChangeHandler,
    } = useContext(AppContext);
 
-   let switchTheme, switchLanguage;
-
-   language === "PL"
-      ? (switchLanguage = styles.switch_pl)
-      : (switchLanguage = styles.switch_en);
-
-   if (theme === "light") {
-      switchTheme = styles.switchThemeLight;
-   } else {
-      switchTheme = styles.switchThemeDark;
-   }
-
+   const langPosition = language === "EN" ? "left" : "right"
+   const themePosition = theme === "dark" ? "left" : "right"
 
    return (
-      <div className={styles.settings}>
-         <div className={styles.settings_container}>
-            <h3>{textContent.settings[0]}</h3>
-            <div className={styles.settings_innerContainer}>
-               <span className={styles.settings_left}>
+      <div className={styles.Settings}>
+         <div className={styles.container}>
+            <h3 className={styles.header}>
+               {textContent.settings[0]}
+            </h3>
+            <div className={styles.innerContainer}>
+               <span className={styles.optionLeft}>
                   {textContent.settings[1]}
                </span>
 
-               <div
-                  className={[styles.switch, switchLanguage].join(" ")}
+               <SwitchButton
+                  theme={theme}
+                  position={langPosition}
                   onClick={languageChangeHandler}
                />
 
-               <span className={styles.settings_right}>
+               <span className={styles.optionRight}>
                   {textContent.settings[2]}
                </span>
             </div>
          </div>
          <div className={styles.line} />
-         <div className={styles.settings_container}>
-            <h3>{textContent.settings[3]}</h3>
-            <div className={styles.settings_innerContainer}>
-               <span className={styles.settings_left}>
+
+         <div className={styles.container}>
+            <h3 className={styles.header}>{textContent.settings[3]}</h3>
+            <div className={styles.innerContainer}>
+               <span className={styles.optionLeft}>
                   {textContent.settings[4]}
                </span>
-               <div
-                  className={[styles.switch, switchTheme].join(" ")}
+               <SwitchButton
+                  theme={theme}
+                  position={themePosition}
                   onClick={themeChangeHandler}
                />
-               <span className={styles.settings_right}>
+               <span className={styles.optionRight}>
                   {textContent.settings[5]}
                </span>
             </div>

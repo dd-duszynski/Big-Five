@@ -3,42 +3,43 @@ import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 import { AppContext } from "../../context/context";
 
-const Header = (props) => {
-   const { textContent, theme } = useContext(AppContext)
-   let theme2;
-   theme === "light" ? (theme2 = styles.header) : (theme2 = styles.headerDark);
+const Header = () => {
+	const { textContent, theme } = useContext(AppContext);
 
-   return (
-      <header className={theme2}>
-         <Link to="/">
-            <h1 className={styles.home}>BIG FIVE</h1>
-         </Link>
-         <nav className={styles.navigation}>
-            <ul className={styles.navigation_list}>
-               <li>
-                  <NavLink
-                     className={styles.headerListItem}
-                     activeClassName={styles.activeHeader}
-                     exact
-                     to="/settings"
-                  >
-                     {textContent.navigation[3]}
-                  </NavLink>
-               </li>
-               <li>
-                  <NavLink
-                     className={styles.headerListItem}
-                     activeClassName={styles.activeHeader}
-                     exact
-                     to="/info"
-                  >
-                     {textContent.navigation[5]}
-                  </NavLink>
-               </li>
-            </ul>
-         </nav>
-      </header>
-   );
-}
+	let css;
+	theme === "light" ? (css = styles.headerLight) : (css = styles.headerDark);
+
+	return (
+		<header className={css}>
+			<Link to="/">
+				<h1 className={styles.home}>BIG FIVE</h1>
+			</Link>
+			<nav>
+				<ul className={styles.navList}>
+					<li>
+						<NavLink
+							className={styles.navListItem}
+							activeClassName={styles.navListItemActive}
+							exact
+							to="/settings"
+						>
+							{textContent.navigation[3]}
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							className={styles.navListItem}
+							activeClassName={styles.navListItemActive}
+							exact
+							to="/info"
+						>
+							{textContent.navigation[4]}
+						</NavLink>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	);
+};
 
 export default Header;

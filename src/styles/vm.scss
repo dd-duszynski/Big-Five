@@ -1,6 +1,23 @@
+$bgc-light: #026b6b;
+$bgc-light-lighter: #0fc2c2;
+$bgc-dark: #222;
+$bgc-dark-lighter: #333;
+
+
+
+
 @mixin mainSectionHeight {
    height: calc(100vh - 80px);
    min-height: 100%;
    overflow-x: hidden;
    overflow-y: auto;
+}
+
+@mixin noSelection {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }

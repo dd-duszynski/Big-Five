@@ -1,20 +1,24 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./MatchList.module.scss";
 import FlagIcon from "../../FlagIcon/FlagIcon";
-import MatchRow from "./matchRow/MatchRow";
+import MatchRow from "../../UI/MatchRow";
+import Spinner from "../../UI/Spinner";
 import { AppContext } from "../../../context/context";
 
 const MatchList = ({ matches, league, onRoundChange, rounds, round }) => {
 	const { textContent } = useContext(AppContext);
+   const [isLoaded, setIsLoaded] = useState(false)
 	const [matchesToShow, setMatchesToShow] = useState(
 		matches.matches.filter((i) => i.matchday === round)
 	);
 
 	useEffect(() => {
+      setIsLoaded(false)
 		setMatchesToShow(matches.matches.filter((i) => i.matchday === round));
-	}, [round, league]);
+      setIsLoaded(true)
+	}, [matches, round]);
 
-	return rounds && matches ? (
+   return isLoaded ? (
 		<div className={styles.matches}>
 			<div className={styles.matchesHeader}>
 				<FlagIcon id={league.id} />
@@ -54,7 +58,7 @@ const MatchList = ({ matches, league, onRoundChange, rounds, round }) => {
 			</table>
 		</div>
 	) : (
-		<p>Loading ...</p>
+		<Spinner />
 	);
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./MatchRow.module.css";
+import styles from "./MatchRow.module.scss";
 
 const MatchRow = ({
 	heading,

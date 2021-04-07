@@ -3,6 +3,8 @@ import { LEAGUES } from "../../content/LEAGUES";
 import { getScorers } from "../../api/footballApi";
 import ScorersList from "./scorersList/ScorersList";
 
+//paginacja
+
 const Scorers = (props) => {
    const [scorers, setScorers] = useState(null);
 

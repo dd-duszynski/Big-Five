@@ -1,29 +1,37 @@
-.LeagueScores, 
-.LeagueScoresDark{
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    width: 80%;
-    padding: 8px 0;
-    border-radius: 10px; 
-    margin-bottom: 10px; 
+@import "../../../styles/vm.scss";
+
+.LeagueScores,
+.LeagueScoresDark {
+   display: grid;
+   grid-template-columns: 80px 1fr;
+   width: 80%;
+   padding: 8px 0;
+   border-radius: 10px;
+   margin-bottom: 10px;
 }
-.LeagueScores{
-    background-color: #018786;
+
+.LeagueScores {
+   background-color: #018786;
 }
-.LeagueScoresDark{
-    background-color: #2f4f4f;
+
+.LeagueScoresDark {
+   background-color: #2f4f4f;
 }
-.LeagueScores:hover{
+
+.LeagueScores:hover {
    background-color: green;
    cursor: pointer;
 }
+
 .LeagueScoresDark:hover {
    background-color: #018786;
    cursor: pointer;
 }
+
 .LeagueScores_heading {
-    grid-column: 2/3;
-    justify-self: start;
-    align-self: center;
-    font-size: 1.6rem;
+   @include noSelection;
+   grid-column: 2/3;
+   justify-self: start;
+   align-self: center;
+   font-size: 1.6rem;
 }

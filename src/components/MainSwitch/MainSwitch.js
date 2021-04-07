@@ -20,13 +20,14 @@ const MainSwitch = () => {
    };
 
    useEffect(() => {
-      getRandom()
+      getRandom(0, 6)
    }, [])
 
-   let theme2;
-   theme === "light" ? (theme2 = styles.imgContainer) : (theme2 = styles.imgContainerDark);
    const img = [styles.img1, styles.img2, styles.img3, styles.img4, styles.img5, styles.img6, styles.img7];
-   const choosenImg = img[imageIndex]
+
+   let css;
+   theme === "light" ? (css = styles.imgContainerLight) : (css = styles.imgContainerDark);
+
    return (
       <div className={styles.MainSwitch}>
          <Switch>
@@ -38,8 +39,8 @@ const MainSwitch = () => {
             <Route path="/scorers/:id" component={Scorers} />
             <Route component={BigFive} />
          </Switch>
-         <div className={theme2}>
-            <img className={[choosenImg, styles.backgroundImage].join(" ")} />
+         <div className={css}>
+            <img className={[img[imageIndex], styles.backgroundImage].join(" ")} />
          </div>
       </div>
    );
