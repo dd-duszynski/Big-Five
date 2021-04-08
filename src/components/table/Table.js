@@ -4,26 +4,24 @@ import { LEAGUES } from "../../content/LEAGUES";
 import TableList from "./tableList/TableList";
 
 const Table = (props) => {
-	const [results, setResults] = useState(null);
+   const [results, setResults] = useState(null);
 
-	useEffect(() => {
-		loadData();
-	}, [props.match.params.id]);
+   useEffect(() => {
+      loadData();
+   }, [props.match.params.id]);
 
-	const loadData = () => {
-		getStandings(props.match.params.id).then((results) =>
-			setResults({ results })
-		);
-	};
+   const loadData = () => {
+      getStandings(props.match.params.id).then((results) =>
+         setResults({ results })
+      );
+   };
 
-	if (!results) {
-		return "Loading...";
-	}
+   if (!results) {
+      return "Loading...";
+   }
 
-	const league = LEAGUES.find(
-		(item) => item.id === props.match.params.id
-	);
+   const league = LEAGUES.find((item) => item.id === props.match.params.id);
 
-	return <TableList scores={results} league={league} />;
+   return <TableList scores={results} league={league} />;
 };
 export default Table;

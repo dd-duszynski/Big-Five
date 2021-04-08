@@ -1,0 +1,49 @@
+@import "../../styles/vm.scss";
+
+.miniTableItemLight,
+.miniTableItemDark {
+   @include roboto400;
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   width: 94%;
+   height: 40px;
+   grid-template-columns: 20px 220px repeat(6, 1fr);
+   grid-template-areas: "position teamName playedGames won draw lost goals points";
+   padding: 4px;
+   margin-bottom: 4px;
+   border-radius: 6px;
+
+   img {
+      width: 30px;
+      height: 30px;
+      margin-right: 6px;
+      background-color: #fff;
+      padding: 1px;
+      border-radius: 50%;
+   }
+
+   span {
+      font-size: 1.3rem;
+   }
+
+   span:nth-child(2) {
+      justify-self: start;
+      align-items: center;
+      display: flex;
+      padding-left: 12px;
+   }
+}
+
+.miniTableItemLight {
+   background-color: $bgc-light;
+}
+
+.miniTableItemDark {
+   background-color: $bgc-dark;
+}
+
+.miniTableItemLight:hover,
+.miniTableItemDark:hover {
+   background-color: green;
+}

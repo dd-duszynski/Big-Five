@@ -21,7 +21,7 @@
 .header {
    font-size: 1.6rem;
    color: white;
-   font-weight: 900;
+   @include roboto700;
    text-decoration: none;
    padding: 4px 0;
    margin-left: 15px;
@@ -31,9 +31,9 @@
    display: flex;
    justify-content: flex-start;
    align-items: center;
-   font-size: 12px;
+   font-size: 13px;
    color: white;
-   font-weight: 900;
+   @include roboto700;
    text-decoration: none;
 
    &:hover {

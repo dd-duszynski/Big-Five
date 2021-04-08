@@ -1,17 +1,19 @@
 import React from "react";
 import styles from "./MiniTable.module.scss";
-import { MiniTableItem } from "../MiniTableItem/MiniTableItem";
+import TableRowHeader from "../../UI/TableRowHeader";
+import TableRow from "../../UI/TableRow";
 
-const MiniTable = ({ scores }) =>
-   scores && (
-      <table className={styles.miniTable}>
-         <MiniTableItem position={0} scores={scores} heading />
-         <MiniTableItem position={0} scores={scores} />
-         <MiniTableItem position={1} scores={scores} />
-         <MiniTableItem position={2} scores={scores} />
-         <MiniTableItem position={3} scores={scores} />
-         <MiniTableItem position={4} scores={scores} />
-      </table>
-   );
+const MiniTable = ({ scores }) => {
+	return (
+		<div className={styles.miniTable}>
+			<TableRowHeader />
+			<TableRow scores={scores} position={0} />
+			<TableRow scores={scores} position={1} />
+			<TableRow scores={scores} position={2} />
+			<TableRow scores={scores} position={3} />
+			<TableRow scores={scores} position={4} />
+		</div>
+	);
+};
 
 export default MiniTable;

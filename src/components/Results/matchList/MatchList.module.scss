@@ -7,7 +7,6 @@
    align-items: center;
    justify-content: flex-start;
    width: 100%;
-   padding-top: 22px;
    color: white;
 }
 
@@ -22,7 +21,7 @@
 }
 
 .matchesHeader h2 {
-   font-weight: 900;
+   @include roboto700;
    font-size: 1.6rem;
    justify-self: start;
    align-self: center;
@@ -34,7 +33,7 @@
    color: white;
    background-color: #018786;
    border: 1px solid currentcolor;
-   font-weight: 900;
+   @include roboto700;
    font-size: 1.4rem;
    letter-spacing: 2px;
 }

@@ -1,35 +1,41 @@
+@import "../../styles/vm.scss";
 .matchRowHeading,
-.matchRowItem{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 40% 20% 40%;
-    grid-template-areas: 
-    "home result away";
-    font-weight: 900;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 7px;
-}
-.matchRowHeading{
-    background-color: #018786;
-}
 .matchRowItem {
-    background-color: #01bab8;
+   @include roboto700;
+   display: grid;
+   justify-items: center;
+   grid-template-columns: 40% 20% 40%;
+   padding: 8px;
+   margin-bottom: 5px;
+   border-radius: 7px;
 }
-.matchRowItem:hover{
-    background-color: green;
+
+.matchRowHeading {
+   background-color: #018786;
 }
-.matchRowHeading th{
-    font-size: 1.5rem;
+
+.matchRowItem {
+   background-color: #01bab8;
 }
+
+.matchRowItem:hover {
+   background-color: green;
+}
+
+.matchRowHeading th {
+   font-size: 1.5rem;
+}
+
 .matchRowItem td {
-	font-size: 1.3rem;
+   font-size: 1.3rem;
 }
+
 .matchRowHeading th:nth-child(1),
-.matchRowItem td:nth-child(1){
-    justify-self: end;
+.matchRowItem td:nth-child(1) {
+   justify-self: end;
 }
+
 .matchRowHeading th:nth-child(3),
-.matchRowItem td:nth-child(3){
-    justify-self: start;
+.matchRowItem td:nth-child(3) {
+   justify-self: start;
 }

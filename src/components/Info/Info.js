@@ -14,6 +14,7 @@ const Info = () => {
                className={styles.link}
                href={textContent.links[0]}
                target="_blank"
+               rel="noreferrer"
             >
                <FaDatabase className={styles.icon} />
                {textContent.info[0]}
@@ -35,6 +36,7 @@ const Info = () => {
                className={styles.link}
                href={textContent.links[2]}
                target="_blank"
+               rel="noreferrer"
             >
                <FaLinkedin className={styles.icon} />
                {textContent.info[2]}

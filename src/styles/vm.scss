@@ -3,14 +3,29 @@ $bgc-light-lighter: #0fc2c2;
 $bgc-dark: #222;
 $bgc-dark-lighter: #333;
 
+@mixin roboto400 {
+   font-weight: 400;
+   font-style: normal;
+}
 
+@mixin roboto700 {
+   font-weight: 700;
+   font-style: normal;
+}
 
+@mixin roboto700italic {
+   font-weight: 400;
+   font-style: italic;
+}
 
 @mixin mainSectionHeight {
    height: calc(100vh - 80px);
    min-height: 100%;
    overflow-x: hidden;
    overflow-y: auto;
+   padding-top: 15px;
+   width: 100%;
+   
 }
 
 @mixin noSelection {

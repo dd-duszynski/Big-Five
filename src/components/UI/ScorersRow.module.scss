@@ -1,0 +1,41 @@
+@import "../../styles/vm.scss";
+
+.ScorersRowLight,
+.ScorersRowDark {
+   @include roboto400;
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   width: 94%;
+   height: 40px;
+   grid-template-columns: 15% 40% 45%;
+   padding: 4px;
+   margin-bottom: 4px;
+   border-radius: 6px;
+
+   &:hover {
+      background-color: green;
+   }
+
+   span {
+      font-size: 1.3rem;
+   }
+
+   span:nth-child(2) {
+      justify-self: start;
+      padding-left: 10px;
+   }
+
+   span:nth-child(3) {
+      justify-self: start;
+      padding-left: 10px;
+   }
+}
+
+.ScorersRowLight {
+   background-color: $bgc-light;
+}
+
+.ScorersRowDark {
+   background-color: $bgc-dark;
+}

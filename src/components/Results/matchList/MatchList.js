@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./MatchList.module.scss";
-import FlagIcon from "../../FlagIcon/FlagIcon";
+import Flags from "../../UI/Flags";
 import MatchRow from "../../UI/MatchRow";
 import Spinner from "../../UI/Spinner";
 import { AppContext } from "../../../context/context";
@@ -21,7 +21,7 @@ const MatchList = ({ matches, league, onRoundChange, rounds, round }) => {
    return isLoaded ? (
 		<div className={styles.matches}>
 			<div className={styles.matchesHeader}>
-				<FlagIcon id={league.id} />
+				<Flags id={league.id} />
 				<h2>
 					{league.name}: {textContent.results[1]}
 				</h2>

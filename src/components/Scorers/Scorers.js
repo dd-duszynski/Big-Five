@@ -3,11 +3,11 @@ import { LEAGUES } from "../../content/LEAGUES";
 import { getScorers } from "../../api/footballApi";
 import ScorersList from "./scorersList/ScorersList";
 
-//paginacja
+//dodaj paginacje
 
 const Scorers = (props) => {
    const [scorers, setScorers] = useState(null);
-
+   console.log(scorers);
    useEffect(() => {
       loadData();
    }, [props.match.params.id]);

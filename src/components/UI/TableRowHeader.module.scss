@@ -1,0 +1,32 @@
+@import "../../styles/vm.scss";
+
+.miniTableHeadingLight,
+.miniTableHeadingDark {
+   @include roboto400;
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   width: 94%;
+   height: 34px;
+   grid-template-columns: 20px 220px repeat(6, 1fr);
+   padding: 4px;
+   margin-bottom: 4px;
+   border-radius: 6px;
+
+   span {
+      font-size: 1.3rem;
+   }
+
+   span:nth-child(2) {
+      justify-self: start;
+      padding-left: 48px;
+   }
+}
+
+.miniTableHeadingLight {
+   background-color: $bgc-light;
+}
+
+.miniTableHeadingDark {
+   background-color: $bgc-dark;
+}

@@ -12,7 +12,7 @@ const localStorageTheme = localStorage.getItem("theme");
 
 const appLanguage =
    localStorageLanguage === "PL" ? "PL" : "EN";
-const appTheme = localStorageTheme === "dark" ? "dark" : "light";
+const appTheme = localStorageTheme === "light" ? "light" : "dark";
 
 const App = () => {
    return (

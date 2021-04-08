@@ -2,47 +2,51 @@
 
 .headerLight,
 .headerDark {
-	grid-column: 1/3;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 80px;
    @include noSelection;
+   grid-column: 1/3;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 80px;
 }
+
 .headerLight {
-	background-color: $bgc-light;
+   background-color: $bgc-light;
 }
+
 .headerDark {
-	background-color: $bgc-dark;
+   background-color: $bgc-dark;
 }
 
 .home {
-	margin-left: 3.3rem;
-	font-size: 4.2rem;
-	color: white;
-	font-weight: 900;
-	cursor: pointer;
-	&:hover {
-		color: $bgc-light-lighter;
-	}
+   @include roboto700;
+   margin-left: 3.3rem;
+   font-size: 4.2rem;
+   color: white;
+   cursor: pointer;
+
+   &:hover {
+      color: $bgc-light-lighter;
+   }
 }
 
 .navList {
-	display: flex;
-	margin-right: 3.3rem;
+   display: flex;
+   margin-right: 3.3rem;
 }
 
 .navListItem {
-	font-size: 1.6rem;
-	color: white;
-	font-weight: 900;
-	text-decoration: none;
-	margin-right: 3.3rem;
-	&:hover {
-		color: $bgc-light-lighter;
-	}
+   @include roboto700;
+   font-size: 1.6rem;
+   color: white;
+   text-decoration: none;
+   margin-right: 3.3rem;
+
+   &:hover {
+      color: $bgc-light-lighter;
+   }
 }
 
 .navListItemActive {
-	color: $bgc-light-lighter;
+   color: $bgc-light-lighter;
 }
