@@ -1,27 +1,14 @@
-.BL1,
-.PD,
-.FL1,
-.PL,
-.SA {
-	background-size: 30px 25px;
+.Flags {
 	width: 30px;
-	height: 25px;
-   justify-self: center;
-   align-self: center;
-}
-
-.BL1 {
-	background-image: url(../../assets/flag/flag_DE.png);
-}
-.PD {
-	background-image: url(../../assets/flag/flag_ES.png);
-}
-.FL1 {
-	background-image: url(../../assets/flag/flag_FR.png);
-}
-.PL {
-	background-image: url(../../assets/flag/flag_EN.png);
-}
-.SA {
-	background-image: url(../../assets/flag/flag_IT.png);
+	height: 30px;
+	justify-self: center;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	img {
+		width: 30px;
+		height: 30px;
+	}
 }

@@ -20,6 +20,7 @@ const TableRowHeader = () => {
 			<span>{textContent.table[5]}</span>
 			<span>{textContent.table[6]}</span>
 			<span>{textContent.table[7]}</span>
+			<span>{textContent.table[8]}</span>
 		</div>
 	);
 };

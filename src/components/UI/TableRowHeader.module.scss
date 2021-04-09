@@ -2,13 +2,10 @@
 
 .miniTableHeadingLight,
 .miniTableHeadingDark {
-   @include roboto400;
-   display: grid;
-   justify-items: center;
-   align-items: center;
+   @include roboto700;
+   @include tableRowGridColumn;
    width: 94%;
-   height: 34px;
-   grid-template-columns: 20px 220px repeat(6, 1fr);
+   height: 35px;
    padding: 4px;
    margin-bottom: 4px;
    border-radius: 6px;
@@ -19,7 +16,7 @@
 
    span:nth-child(2) {
       justify-self: start;
-      padding-left: 48px;
+      padding-left: 50px;
    }
 }
 

@@ -2,36 +2,30 @@
 
 .ScorersRowHeaderLight,
 .ScorersRowHeaderDark {
-   @include roboto400;
-   display: grid;
-   justify-items: center;
-   align-items: center;
-   width: 94%;
-   height: 34px;
-   grid-template-columns: 15% 40% 45%;
-   padding: 4px;
-   margin-bottom: 4px;
-   border-radius: 6px;
+	@include roboto700;
+	@include scorersRowGridColumn;
+	width: 94%;
+	height: 34px;
+	padding: 4px;
+	margin-bottom: 4px;
+	border-radius: 6px;
 
-   span {
-      font-size: 1.3rem;
-   }
+	span {
+		font-size: 1.3rem;
+	}
 
-   span:nth-child(2) {
-      justify-self: start;
-      padding-left: 10px;
-   }
-
-   span:nth-child(3) {
-      justify-self: start;
-      padding-left: 10px;
-   }
+	span:nth-child(2),
+	span:nth-child(4),
+	span:nth-child(5) {
+		justify-self: start;
+		padding-left: 10px;
+	}
 }
 
 .ScorersRowHeaderLight {
-   background-color: $bgc-light;
+	background-color: $bgc-light;
 }
 
 .ScorersRowHeaderDark {
-   background-color: $bgc-dark;
+	background-color: $bgc-dark;
 }

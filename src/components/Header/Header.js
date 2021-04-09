@@ -21,7 +21,7 @@ const Header = () => {
 							className={styles.navListItem}
 							activeClassName={styles.navListItemActive}
 							exact
-							to="/settings"
+							to="/"
 						>
 							{textContent.navigation[3]}
 						</NavLink>
@@ -31,9 +31,19 @@ const Header = () => {
 							className={styles.navListItem}
 							activeClassName={styles.navListItemActive}
 							exact
-							to="/info"
+							to="/settings"
 						>
 							{textContent.navigation[4]}
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							className={styles.navListItem}
+							activeClassName={styles.navListItemActive}
+							exact
+							to="/info"
+						>
+							{textContent.navigation[5]}
 						</NavLink>
 					</li>
 				</ul>

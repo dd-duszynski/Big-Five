@@ -1,5 +1,12 @@
 const PL = {
-	navigation: ["Wyniki", "Tabela", "Strzelcy", "Ustawienia", "Informacje"],
+	navigation: [
+		"Wyniki",
+		"Tabela",
+		"Strzelcy",
+		"Strona Główna",
+		"Ustawienia",
+		"Informacje",
+	],
 	settings: [
 		"Język:",
 		"Angielski",
@@ -22,9 +29,20 @@ const PL = {
 		"Porażki",
 		"Bramki",
 		"Punkty",
+		"Forma",
+		"W",
+		"R",
+		"P",
 	],
 	results: ["Wyniki", "Kolejka", "Gospodarz", "Wynik", "Gość"],
-	scorers: ["Strzelcy", "Bramki", "Zawodnik", "Drużyna"],
+	scorers: [
+		"Strzelcy",
+		"Bramki",
+		"Zawodnik",
+		"Wiek",
+		"Narodowość",
+		"Drużyna",
+	],
 	links: [
 		"https://www.football-data.org",
 		"mailto:dd.duszynski@gmail.com",

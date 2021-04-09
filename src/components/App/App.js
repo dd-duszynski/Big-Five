@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "../../styles/globalStyle.scss";
 import styles from "./App.module.scss";
 import { AppProvider } from "../../context/context";
@@ -17,13 +17,13 @@ const appTheme = localStorageTheme === "light" ? "light" : "dark";
 const App = () => {
    return (
       <AppProvider appLanguage={appLanguage} appTheme={appTheme}>
-         <BrowserRouter>
+         <HashRouter>
             <div className={styles.App}>
                <Header />
                <Menu />
                <MainSwitch />
             </div>
-         </BrowserRouter>
+         </HashRouter>
       </AppProvider>
    );
 };
