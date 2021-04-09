@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/big-five/static/css/main.375b39c3.chunk.css",
-    "main.js": "/big-five/static/js/main.c1267f7c.chunk.js",
-    "main.js.map": "/big-five/static/js/main.c1267f7c.chunk.js.map",
+    "main.css": "/big-five/static/css/main.046d2349.chunk.css",
+    "main.js": "/big-five/static/js/main.5a43a69c.chunk.js",
+    "main.js.map": "/big-five/static/js/main.5a43a69c.chunk.js.map",
     "runtime-main.js": "/big-five/static/js/runtime-main.878fe04e.js",
     "runtime-main.js.map": "/big-five/static/js/runtime-main.878fe04e.js.map",
-    "static/js/2.6a1421ac.chunk.js": "/big-five/static/js/2.6a1421ac.chunk.js",
-    "static/js/2.6a1421ac.chunk.js.map": "/big-five/static/js/2.6a1421ac.chunk.js.map",
+    "static/js/2.86ee83f5.chunk.js": "/big-five/static/js/2.86ee83f5.chunk.js",
+    "static/js/2.86ee83f5.chunk.js.map": "/big-five/static/js/2.86ee83f5.chunk.js.map",
     "index.html": "/big-five/index.html",
-    "static/css/main.375b39c3.chunk.css.map": "/big-five/static/css/main.375b39c3.chunk.css.map",
-    "static/js/2.6a1421ac.chunk.js.LICENSE.txt": "/big-five/static/js/2.6a1421ac.chunk.js.LICENSE.txt",
-    "static/media/MainSwitch.module.scss": "/big-five/static/media/img7.87d5f572.jpg"
+    "static/css/main.046d2349.chunk.css.map": "/big-five/static/css/main.046d2349.chunk.css.map",
+    "static/js/2.86ee83f5.chunk.js.LICENSE.txt": "/big-five/static/js/2.86ee83f5.chunk.js.LICENSE.txt",
+    "static/media/LaLiga.7068b76b.png": "/big-five/static/media/LaLiga.7068b76b.png",
+    "static/media/Ligue1.aa320750.png": "/big-five/static/media/Ligue1.aa320750.png",
+    "static/media/SerieA.e64e8622.png": "/big-five/static/media/SerieA.e64e8622.png",
+    "static/media/bundesliga.24da8993.png": "/big-five/static/media/bundesliga.24da8993.png",
+    "static/media/MainSwitch.module.scss": "/big-five/static/media/img7.87d5f572.jpg",
+    "static/media/premier.e855b0f8.png": "/big-five/static/media/premier.e855b0f8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.878fe04e.js",
-    "static/js/2.6a1421ac.chunk.js",
-    "static/css/main.375b39c3.chunk.css",
-    "static/js/main.c1267f7c.chunk.js"
+    "static/js/2.86ee83f5.chunk.js",
+    "static/css/main.046d2349.chunk.css",
+    "static/js/main.5a43a69c.chunk.js"
   ]
 }
