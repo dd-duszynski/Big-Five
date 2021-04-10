@@ -12,6 +12,7 @@
 }
 
 .container {
+   @include roboto700;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -20,7 +21,6 @@
    height: auto;
    margin: 0 auto;
    color: white;
-   @include roboto700;
 }
 
 .header {

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TableList.module.scss";
 import TableRow from "../../UI/TableRow";
 import TableRowHeader from "../../UI/TableRowHeader";
-import MainBar from "../../UI/MainBar";
+import MainBar from "../../MainBar/MainBar";
 
 const TableList = ({ scores, league }) => {
 	return (

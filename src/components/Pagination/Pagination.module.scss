@@ -1,0 +1,51 @@
+@import "../../styles/vm.scss";
+
+.PaginationLight,
+.PaginationDark {
+   width: auto;
+   padding: 0 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 6px;
+   height: 40px;
+}
+
+.list {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+}
+
+.PaginationLight {
+   background-color: $bgc-light;
+   .activeNumber {
+      color: $bgc-light;
+      background-color: $bgc-light-lighter;
+   }
+}
+
+.PaginationDark {
+   background-color: $bgc-dark;
+   .activeNumber {
+      background-color: $bgc-dark-lighter;
+   }
+}
+
+.number {
+   list-style: none;
+   width: 30px;
+   height: 30px;
+   font-size: 14px;
+   padding: 7px 12px;
+   color: white;
+   margin-right: 5px;
+   border-radius: 50%;
+
+   &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: green;
+   }
+}

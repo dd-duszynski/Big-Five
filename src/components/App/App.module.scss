@@ -6,7 +6,7 @@
    max-height: 100vh;
    display: grid;
    grid-template-columns: 240px auto;
-
+	@include noSelection;
    ::-webkit-scrollbar {
       width: 8px;
    }

@@ -33,6 +33,15 @@
 
 .miniTableItemLight {
    background-color: $bgc-light;
+   .win{
+      background-color: rgb(49, 177, 49);
+   }
+   .draw{
+      background-color: rgb(207, 156, 25);
+   }
+   .lose{
+      background-color: rgb(190, 42, 42);
+   }
 }
 
 .miniTableItemDark {
@@ -56,10 +65,9 @@
    height: 17px;
    margin-right: 3px;
    border-radius: 4px;
-   font-size: 12px;
-   line-height: 18px;
+   font-size: 11px;
+   line-height: 19px;
    text-align: center;
-   @include noSelection;
 }
 .win{
    background-color: rgb(49, 177, 49);

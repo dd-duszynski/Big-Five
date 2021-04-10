@@ -5,10 +5,10 @@ import { FaDatabase, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 
 const Info = () => {
-   const { textContent } = useContext(AppContext);
-
+   const { textContent, theme } = useContext(AppContext);
+   const css = theme === "light" ? styles.InfoLight : styles.InfoDark
    return (
-      <ul className={styles.Info}>
+      <ul className={css}>
          <li className={styles.infoItem}>
             <a
                className={styles.link}

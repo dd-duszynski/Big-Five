@@ -1,0 +1,23 @@
+// @import "../../styles/vm.scss";
+
+.arrowBox {
+   width: 28px;
+   height: 28px;
+   padding: 8px 0;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &:hover{
+      cursor: pointer;
+      background-color: green;
+   }
+}
+.arrowIcon {
+   width: 18px;
+   height: 18px;
+   color: #fff;
+   transition: transform 0.5s;
+   transform: rotate(0);
+   color: #fff;
+}

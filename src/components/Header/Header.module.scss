@@ -2,7 +2,6 @@
 
 .headerLight,
 .headerDark {
-   @include noSelection;
    grid-column: 1/3;
    display: flex;
    justify-content: space-between;

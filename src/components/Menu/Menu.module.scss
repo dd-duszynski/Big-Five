@@ -3,7 +3,6 @@
 .menuLight,
 .menuDark {
    @include mainSectionHeight;
-   @include noSelection;
    grid-column: 1/2;
    position: relative;
    width: 240px;

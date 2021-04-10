@@ -1,0 +1,118 @@
+@import "../../styles/vm.scss";
+
+.mainPage {
+   &:hover {
+      cursor: pointer;
+
+      .header {
+         color: $bgc-light-lighter;
+      }
+
+      .icon {
+         color: $bgc-light-lighter;
+      }
+   }
+}
+
+.MainBarLight,
+.MainBarDark {
+   display: grid;
+   grid-template-columns: 82px 1fr 50px;
+   width: 96%;
+   padding: 8px 0;
+   border-radius: 10px;
+   margin-bottom: 10px;
+
+   select {
+      border: none;
+      border: 1px solid #fff;
+      justify-self: start;
+      align-self: center;
+      color: #fff;
+      padding: 4px 6px;
+      @include roboto700;
+      font-size: 14px;
+      margin: 0 10px;
+      &:hover{
+         cursor: pointer;
+      }
+      &:focus{
+         outline: none;
+      }
+   }
+}
+
+.MainBarDark {
+   background-color: $bgc-dark;
+
+   select {
+      background-color: $bgc-dark;
+   }
+}
+
+.MainBarLight {
+   background-color: $bgc-light;
+
+   select {
+      background-color: $bgc-light;
+   }
+
+}
+
+.headerBox {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header {
+   grid-column: 2/3;
+   justify-self: start;
+   align-self: center;
+   font-size: 16px;
+}
+.roundsContainer{
+   display: flex;
+   align-items: center;
+}
+.label {
+   font-size: 16px;
+   margin-left: 8px;
+   margin-right: 8px;
+   justify-self: start;
+   align-self: center;
+}
+
+.arrowBox {
+   width: 28px;
+   height: 28px;
+   padding: 8px 0;
+   border-radius: 6px;
+   border: 1px solid #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &:hover{
+      cursor: pointer;
+      background-color: green;
+   }
+   .arrowIcon {
+      width: 18px;
+      height: 18px;
+      color: #fff;
+      transition: transform 0.5s;
+      transform: rotate(0);
+   }
+}
+
+.icon {
+   width: 25px;
+   height: 25px;
+   color: #fff;
+   transition: transform 0.5s;
+   transform: rotate(0);
+}
+
+.rotate {
+   transform: rotate(180deg);
+}

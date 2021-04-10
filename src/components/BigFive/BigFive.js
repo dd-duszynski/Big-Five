@@ -4,7 +4,7 @@ import { LEAGUES } from "../../content/LEAGUES";
 import MiniTable from "./MiniTable/MiniTable";
 import { getStandings } from "../../api/footballApi";
 import { AppContext } from "../../context/context";
-import MainBar from "../UI/MainBar";
+import MainBar from "../MainBar/MainBar";
 
 const League = ({ league, expanded, onToggle, theme }) => {
 	const [results, setResults] = useState(null);

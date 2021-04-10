@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styles from "./Settings.module.scss";
 import { AppContext } from "../../context/context";
 import SwitchButton from "../UI/SwitchButton"
+
 const Settings = () => {
    const {
       textContent,

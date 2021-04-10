@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getStandings } from "../../api/footballApi";
 import { LEAGUES } from "../../content/LEAGUES";
 import TableList from "./tableList/TableList";
-
+import Spinner from "../UI/Spinner";
 const Table = (props) => {
    const [results, setResults] = useState(null);
 
@@ -17,11 +17,10 @@ const Table = (props) => {
    };
 
    if (!results) {
-      return "Loading...";
+      return <Spinner />;
    }
 
    const league = LEAGUES.find((item) => item.id === props.match.params.id);
-
    return <TableList scores={results} league={league} />;
 };
 export default Table;
