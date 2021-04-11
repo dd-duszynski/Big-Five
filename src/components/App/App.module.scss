@@ -24,3 +24,11 @@
       background: #555;
    }
 }
+@media (max-width: $brakepoint){
+   .App{
+      display: flex;
+      flex-direction: column;
+
+   }
+
+}

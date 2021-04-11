@@ -1,19 +1,30 @@
 import React from "react";
 import styles from "./MiniTable.module.scss";
-import TableRowHeader from "../../UI/TableRowHeader";
 import TableRow from "../../UI/TableRow";
+import TableRowHeader from "../../UI/TableRowHeader";
+import useSort from "../../../hooks/useSort"
 
 const MiniTable = ({ scores }) => {
-	return (
-		<div className={styles.miniTable}>
-			<TableRowHeader />
-			<TableRow scores={scores} position={0} />
-			<TableRow scores={scores} position={1} />
-			<TableRow scores={scores} position={2} />
-			<TableRow scores={scores} position={3} />
-			<TableRow scores={scores} position={4} />
-		</div>
-	);
+   const [
+      arrayToShow,
+      sortBy,
+      setSortBy,
+      sortWay,
+      setSortWay] = useSort(scores.results.standings[0].table.slice(0, 5), scores)
+
+   return (
+      <div className={styles.MiniTable}>
+         <TableRowHeader
+            sortBy={sortBy}
+            sortWay={sortWay}
+            setSortBy={setSortBy}
+            setSortWay={setSortWay}
+         />
+         {arrayToShow.map((_, index) => (
+            <TableRow scores={arrayToShow} position={index} key={index} />
+         ))}
+      </div>
+   );
 };
 
 export default MiniTable;

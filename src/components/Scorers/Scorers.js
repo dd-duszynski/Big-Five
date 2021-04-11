@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { LEAGUES } from "../../content/LEAGUES";
 import { getScorers } from "../../api/footballApi";
-import ScorersList from "./scorersList/ScorersList";
+import ScorersList from "./ScorersList/ScorersList";
 import Spinner from "../UI/Spinner";
 
 const Scorers = (props) => {
    const [scorers, setScorers] = useState(null);
    console.log(scorers);
+
    useEffect(() => {
       loadData();
    }, [props.match.params.id]);
@@ -24,8 +25,8 @@ const Scorers = (props) => {
    );
 
    if (!scorers) {
-		return <Spinner />;
-	}
+      return <Spinner />;
+   }
 
    return <ScorersList league={league} scorers={scorers} />;
 };

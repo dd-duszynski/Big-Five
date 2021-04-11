@@ -12,11 +12,25 @@
 
    span {
       font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+         cursor: pointer;
+         text-decoration: underline;
+      }
    }
 
    span:nth-child(2) {
       justify-self: start;
       padding-left: 50px;
+   }
+
+   span:nth-child(9) {
+      &:hover {
+         cursor: auto;
+         text-decoration: none;
+      }
    }
 }
 
@@ -26,4 +40,20 @@
 
 .miniTableHeadingDark {
    background-color: $bgc-dark;
+}
+
+.arrowAsc,
+.arrowDesc {
+   width: 16px;
+   height: 16px;
+   color: #fff;
+   transition: transform 0.5s;
+}
+
+.arrowAsc {
+   transform: rotate(0);
+}
+
+.arrowDesc {
+   transform: rotate(180deg);
 }

@@ -1,0 +1,33 @@
+@import "../../styles/vm.scss";
+
+.HamburgerMenu,
+.HamburgerMenuActive {
+   margin-right: 4vw;
+   display: block;
+   cursor: pointer;
+
+   div {
+      width: 30px;
+      height: 2px;
+      margin: 7px;
+      background-color: white;
+      transition: transform 0.5s ease;
+   }
+
+}
+
+.HamburgerMenuActive {
+   div {
+      &:nth-child(1) {
+         transform: rotate(-45deg) translate(-13px, 0px);
+      }
+
+      &:nth-child(2) {
+         opacity: 0;
+      }
+
+      &:nth-child(3) {
+         transform: rotate(45deg) translate(-12px, 0px);
+      }
+   }
+}

@@ -21,14 +21,27 @@ const Arrow = ({ direction, onClick, disable }) => {
          <RiArrowRightSLine className={styles.arrowIcon} />
       </div>
    )
-   const disableArrow = (
+   const disableLeftArrow = (
       <div
-         className={styles.arrowBox}
+         className={styles.disableArrowBox}
+      >
+         <RiArrowLeftSLine className={styles.disable} />
+      </div>
+   )
+   const disableRightArrow = (
+      <div
+         className={styles.disableArrowBox}
       >
          <RiArrowRightSLine className={styles.disable} />
       </div>
    )
 
+   if (disable && direction === "left") {
+      return disableLeftArrow
+   } else if (disable && direction === "right") {
+      return disableRightArrow
+   }
+   
    return direction === "left" ? leftArrow : rightArrow;
 }
 

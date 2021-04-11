@@ -2,6 +2,7 @@
 
 .PaginationLight,
 .PaginationDark {
+   margin-top: 8px;
    width: auto;
    padding: 0 10px;
    display: flex;
@@ -20,6 +21,7 @@
 
 .PaginationLight {
    background-color: $bgc-light;
+
    .activeNumber {
       color: $bgc-light;
       background-color: $bgc-light-lighter;
@@ -28,6 +30,7 @@
 
 .PaginationDark {
    background-color: $bgc-dark;
+
    .activeNumber {
       background-color: $bgc-dark-lighter;
    }

@@ -4,7 +4,7 @@ import styles from "./MainSwitch.module.scss";
 import BigFive from "../BigFive/BigFive";
 import Settings from "../Settings/Settings";
 import Info from "../Info/Info";
-import Table from "../table/Table";
+import Table from "../Table/Table";
 import Results from "../Results/Results";
 import Scorers from "../Scorers/Scorers";
 import { AppContext } from "../../context/context";

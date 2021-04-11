@@ -3,7 +3,7 @@ import { AppContext } from "../../context/context";
 import styles from "./MainBar.module.scss";
 import Flags from "../UI/Flags";
 import Arrow from "../UI/Arrow";
-import { RiArrowUpSLine, RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowUpSLine } from "react-icons/ri";
 
 const MainBar = ({
    league,
@@ -16,15 +16,15 @@ const MainBar = ({
 }) => {
    const { theme, textContent } = useContext(AppContext);
 
-   const css =
+   const cssMainBar =
       theme === "light" ? styles.MainBarLight : styles.MainBarDark;
+
    const cssMainPage = !noClick && styles.mainPage;
 
-   const iconCSS = choosen
+   const cssIcon = choosen
       ? [styles.icon, styles.rotate].join(" ")
       : styles.icon;
 
-   const clickHandler = onClick ? onClick : null;
 
    const arrowClickHandler = (direction) => {
       const roundsLength = rounds.length
@@ -40,7 +40,7 @@ const MainBar = ({
    }
 
    return (
-      <div className={[css, cssMainPage].join(' ')} onClick={clickHandler}>
+      <div className={[cssMainBar, cssMainPage].join(' ')} onClick={onClick}>
          <Flags id={league.id} />
          <div className={styles.headerBox}>
             <h2 className={styles.header}>{league.name}</h2>
@@ -48,7 +48,7 @@ const MainBar = ({
                <div className={styles.roundsContainer}>
                   <label
                      className={styles.label}
-                     for="round-select"
+                     htmlFor="round-select"
                   >
                      {textContent.results[1]}
                   </label>
@@ -68,7 +68,6 @@ const MainBar = ({
                            <option
                               key={`metchday_${r}`}
                               value={r}
-                              selected={r === round}
                            >
                               {r}
                            </option>
@@ -85,7 +84,7 @@ const MainBar = ({
             )}
 
          </div>
-         {!noClick && <RiArrowUpSLine className={iconCSS} />}
+         {!noClick && <RiArrowUpSLine className={cssIcon} />}
       </div>
    )
 }

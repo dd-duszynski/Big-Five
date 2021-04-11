@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getStandings } from "../../api/footballApi";
 import { LEAGUES } from "../../content/LEAGUES";
-import TableList from "./tableList/TableList";
+import TableList from "./TableList/TableList";
 import Spinner from "../UI/Spinner";
 const Table = (props) => {
    const [results, setResults] = useState(null);

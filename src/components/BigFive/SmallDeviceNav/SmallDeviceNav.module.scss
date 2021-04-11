@@ -1,0 +1,55 @@
+@import "../../../styles/vm.scss";
+
+.navLight,
+.navDark {
+   width: 94%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   justify-items: center;
+   border-radius: 6px;
+   margin-bottom: 20px;
+}
+
+.navLight {
+   background-color: $bgc-light;
+}
+
+.navDark {
+   background-color: $bgc-dark;
+}
+
+.link {
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+   align-items: center;
+   margin-bottom: 15px;
+   font-size: 12px;
+
+   &:hover {
+      cursor: pointer;
+      color: green;
+   }
+}
+
+.icon_vs,
+.icon_tab,
+.icon_stat {
+   margin: 12px 0 6px;
+   background-size: 35px 35px;
+   height: 35px;
+   width: 35px;
+}
+
+.icon_vs {
+   background-image: url(../../../assets/icons/icon_vs@2x.png);
+}
+
+.icon_tab {
+   background-image: url(../../../assets/icons/icon_tab@2x.png);
+}
+
+.icon_stat {
+   background-image: url(../../../assets/icons/scorer.png);
+}
