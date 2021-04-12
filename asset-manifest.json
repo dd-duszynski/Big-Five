@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/big-five/static/css/main.f161709d.chunk.css",
-    "main.js": "/big-five/static/js/main.41a45ace.chunk.js",
-    "main.js.map": "/big-five/static/js/main.41a45ace.chunk.js.map",
+    "main.css": "/big-five/static/css/main.13d13546.chunk.css",
+    "main.js": "/big-five/static/js/main.6ec3ce03.chunk.js",
+    "main.js.map": "/big-five/static/js/main.6ec3ce03.chunk.js.map",
     "runtime-main.js": "/big-five/static/js/runtime-main.878fe04e.js",
     "runtime-main.js.map": "/big-five/static/js/runtime-main.878fe04e.js.map",
-    "static/js/2.2ec7387c.chunk.js": "/big-five/static/js/2.2ec7387c.chunk.js",
-    "static/js/2.2ec7387c.chunk.js.map": "/big-five/static/js/2.2ec7387c.chunk.js.map",
+    "static/js/2.a9ab7088.chunk.js": "/big-five/static/js/2.a9ab7088.chunk.js",
+    "static/js/2.a9ab7088.chunk.js.map": "/big-five/static/js/2.a9ab7088.chunk.js.map",
     "index.html": "/big-five/index.html",
-    "static/css/main.f161709d.chunk.css.map": "/big-five/static/css/main.f161709d.chunk.css.map",
-    "static/js/2.2ec7387c.chunk.js.LICENSE.txt": "/big-five/static/js/2.2ec7387c.chunk.js.LICENSE.txt",
+    "static/css/main.13d13546.chunk.css.map": "/big-five/static/css/main.13d13546.chunk.css.map",
+    "static/js/2.a9ab7088.chunk.js.LICENSE.txt": "/big-five/static/js/2.a9ab7088.chunk.js.LICENSE.txt",
     "static/media/LaLiga.7068b76b.png": "/big-five/static/media/LaLiga.7068b76b.png",
     "static/media/Ligue1.aa320750.png": "/big-five/static/media/Ligue1.aa320750.png",
     "static/media/SerieA.e64e8622.png": "/big-five/static/media/SerieA.e64e8622.png",
     "static/media/bundesliga.24da8993.png": "/big-five/static/media/bundesliga.24da8993.png",
     "static/media/MainSwitch.module.scss": "/big-five/static/media/img7.87d5f572.jpg",
-    "static/media/premier.e855b0f8.png": "/big-five/static/media/premier.e855b0f8.png"
+    "static/media/premier.e855b0f8.png": "/big-five/static/media/premier.e855b0f8.png",
+    "static/media/MenuItem.module.scss": "/big-five/static/media/tabel-icon.a3cfb13e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.878fe04e.js",
-    "static/js/2.2ec7387c.chunk.js",
-    "static/css/main.f161709d.chunk.css",
-    "static/js/main.41a45ace.chunk.js"
+    "static/js/2.a9ab7088.chunk.js",
+    "static/css/main.13d13546.chunk.css",
+    "static/js/main.6ec3ce03.chunk.js"
   ]
 }
