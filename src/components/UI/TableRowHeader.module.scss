@@ -2,58 +2,74 @@
 
 .miniTableHeadingLight,
 .miniTableHeadingDark {
-   @include roboto700;
-   @include tableRowGridColumn;
-   width: 94%;
-   height: 35px;
-   padding: 4px;
-   margin-bottom: 4px;
-   border-radius: 6px;
+	@include roboto700;
+	@include tableRowGridColumn;
+	width: 100%;
+	height: 35px;
+	padding: 4px;
+	margin-bottom: 4px;
+	border-radius: 6px;
 
-   span {
-      font-size: 1.3rem;
-      display: flex;
-      align-items: center;
+	span {
+		font-size: 1.3rem;
+		display: flex;
+		align-items: center;
 
-      &:hover {
-         cursor: pointer;
-         text-decoration: underline;
-      }
-   }
+		&:hover {
+			cursor: pointer;
+		}
+	}
 
-   span:nth-child(2) {
-      justify-self: start;
-      padding-left: 50px;
-   }
+	span:nth-child(2) {
+		justify-self: start;
+		padding-left: 50px;
+	}
 
-   span:nth-child(9) {
-      &:hover {
-         cursor: auto;
-         text-decoration: none;
-      }
-   }
+	span:nth-child(10) {
+		&:hover {
+			cursor: auto;
+			text-decoration: none;
+		}
+	}
 }
 
 .miniTableHeadingLight {
-   background-color: $bgc-light;
+	background-color: $bgc-light;
+	span {
+		&:hover {
+			color: $bgc-light-lighter;
+		}
+	}
 }
 
 .miniTableHeadingDark {
-   background-color: $bgc-dark;
+	background-color: $bgc-dark;
+	span {
+		&:hover {
+			color: $bgc-light;
+		}
+	}
+}
+
+.iconBox {
+	background-color: green;
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
 }
 
 .arrowAsc,
 .arrowDesc {
-   width: 16px;
-   height: 16px;
-   color: #fff;
-   transition: transform 0.5s;
+	width: 16px;
+	height: 16px;
+	color: #fff;
+	transition: transform 0.5s;
 }
 
 .arrowAsc {
-   transform: rotate(0);
+	transform: rotate(0);
 }
 
 .arrowDesc {
-   transform: rotate(180deg);
+	transform: rotate(180deg);
 }

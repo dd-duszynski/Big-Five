@@ -3,7 +3,7 @@
 .ScorersRowHeaderLight,
 .ScorersRowHeaderDark {
 	@include roboto700;
-	@include scorersRowGridColumn;
+   @include scorersRowGrid;
 	width: 94%;
 	height: 34px;
 	padding: 4px;
@@ -12,6 +12,7 @@
 
 	span {
 		font-size: 1.3rem;
+		text-align: center;
 	}
 
 	span:nth-child(2),

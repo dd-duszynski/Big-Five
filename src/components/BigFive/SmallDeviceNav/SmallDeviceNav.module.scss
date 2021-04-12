@@ -2,54 +2,53 @@
 
 .navLight,
 .navDark {
-   width: 94%;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   justify-items: center;
-   border-radius: 6px;
-   margin-bottom: 20px;
+	width: 94%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	margin-bottom: 7px;
 }
 
 .navLight {
-   background-color: $bgc-light;
+	background-color: $bgc-light;
+	.link {
+		&:hover {
+			cursor: pointer;
+			color: $bgc-light-lighter;
+		}
+	}
 }
 
 .navDark {
-   background-color: $bgc-dark;
+	background-color: $bgc-dark;
+	.link {
+		&:hover {
+			cursor: pointer;
+			color: $bgc-light;
+		}
+	}
 }
 
 .link {
-   color: #fff;
-   display: flex;
-   flex-direction: column;
-   justify-items: center;
-   align-items: center;
-   margin-bottom: 15px;
-   font-size: 12px;
-
-   &:hover {
-      cursor: pointer;
-      color: green;
-   }
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	margin-bottom: 10px;
+	font-size: 12px;
+	width: 30%;
 }
 
-.icon_vs,
-.icon_tab,
-.icon_stat {
-   margin: 12px 0 6px;
-   background-size: 35px 35px;
-   height: 35px;
-   width: 35px;
+.icon {
+	margin: 12px 0 6px;
+	height: 35px;
+	width: 35px;
 }
 
-.icon_vs {
-   background-image: url(../../../assets/icons/icon_vs@2x.png);
-}
-
-.icon_tab {
-   background-image: url(../../../assets/icons/icon_tab@2x.png);
-}
-
-.icon_stat {
-   background-image: url(../../../assets/icons/scorer.png);
+.line {
+	height: 80%;
+	width: 1px;
+	background-color: #fff;
 }

@@ -11,7 +11,7 @@
 	border-radius: 6px;
 	span {
 		font-size: 1.3rem;
-      align-self: center;
+		align-self: center;
 	}
 	span:nth-child(1) {
 		justify-self: end;
@@ -31,3 +31,4 @@
 .ResultsRowHeaderDark {
 	background-color: $bgc-dark;
 }
+

@@ -67,9 +67,6 @@
 }
 
 .header {
-   grid-column: 2/3;
-   justify-self: start;
-   align-self: center;
    font-size: 16px;
 }
 .roundsContainer{
@@ -116,4 +113,20 @@
 
 .rotate {
    transform: rotate(180deg);
+}
+
+@media(max-width: 500px){
+   .headerBox {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+   }
+   .roundsContainer{
+      margin-top: 8px;
+   }
+   .label {
+      margin-left: 0;
+   }
+
 }

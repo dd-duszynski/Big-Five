@@ -2,14 +2,14 @@
 
 .PaginationLight,
 .PaginationDark {
-   margin-top: 8px;
-   width: auto;
-   padding: 0 10px;
    display: flex;
    justify-content: center;
    align-items: center;
-   border-radius: 6px;
+   width: auto;
    height: 40px;
+   margin-top: 10px;
+   padding: 0 10px;
+   border-radius: 6px;
 }
 
 .list {
@@ -41,7 +41,7 @@
    width: 30px;
    height: 30px;
    font-size: 14px;
-   padding: 7px 12px;
+   padding: 6px 11px;
    color: white;
    margin-right: 5px;
    border-radius: 50%;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getMatches } from "../../api/footballApi";
 import { LEAGUES } from "../../content/LEAGUES";
-import MatchList from "./MatchList/MatchList";
+import ResultsList from "./ResultsList/ResultsList";
 import Spinner from "../UI/Spinner";
 
 const Results = (props) => {
@@ -41,7 +41,7 @@ const Results = (props) => {
 	}
 
 	return (
-		<MatchList
+		<ResultsList
 			onRoundChange={onRoundChange}
 			matches={matches}
 			rounds={rounds}

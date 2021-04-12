@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styles from "./MatchList.module.scss";
+import styles from "./ResultsList.module.scss";
 import Spinner from "../../UI/Spinner";
 import MainBar from "../../MainBar/MainBar";
 import ResultsRowHeader from "../../UI/ResultsRowHeader";
 import ResultsRow from "../../UI/ResultsRow";
 
-const MatchList = ({ matches, league, onRoundChange, rounds, round }) => {
+const ResultsList = ({ matches, league, onRoundChange, rounds, round }) => {
    const [isLoaded, setIsLoaded] = useState(false);
    const [matchesToShow, setMatchesToShow] = useState(
       matches.matches.filter((i) => i.matchday === round)
@@ -17,7 +17,7 @@ const MatchList = ({ matches, league, onRoundChange, rounds, round }) => {
    }, [matches, round]);
 
    return isLoaded ? (
-      <div className={styles.matches}>
+      <div className={styles.ResultsList}>
          <MainBar
             league={league}
             noClick
@@ -35,4 +35,4 @@ const MatchList = ({ matches, league, onRoundChange, rounds, round }) => {
    );
 };
 
-export default MatchList;
+export default ResultsList;

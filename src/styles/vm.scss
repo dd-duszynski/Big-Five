@@ -1,5 +1,5 @@
-$bgc-light: #026b6b;
-$bgc-light-lighter: #0ca7a7;
+$bgc-light: #066161;
+$bgc-light-lighter: #1eadad;
 $bgc-dark: #222;
 $bgc-dark-lighter: #333;
 
@@ -21,11 +21,10 @@ $brakepoint: 1000px;
 }
 
 @mixin mainSectionHeight {
-	height: calc(100vh - 80px);
+	height: auto;
 	min-height: calc(100vh - 80px);
-	overflow-x: hidden;
-	overflow-y: auto;
 	padding-top: 15px;
+	padding-bottom: 15px;
 	width: 100%;
 }
 
@@ -42,17 +41,22 @@ $brakepoint: 1000px;
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: 60px 250px repeat(6, 1fr) 150px;
+	grid-template-columns: 60px 200px repeat(7, 72px) 130px;
 }
 
-@mixin scorersRowGridColumn {
+@mixin scorersRowGrid {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: 10% 200px 10% 200px 1fr;
+	grid-template-columns: 60px 200px 60px 1fr 1fr;
+   @media screen and (max-width: 800px) {
+      grid-template-columns: 60px 150px 60px 150px 150px;
+      color: red;
+   }
 }
+
 @mixin resultsRowGridColumn {
-   display: grid;
-   justify-items: center;
-   grid-template-columns: 40% 20% 40%;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 40% 20% 40%;
 }

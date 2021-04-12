@@ -8,5 +8,9 @@
    justify-content: flex-start;
    width: 100%;
    color: white;
-   overflow-x: hidden;
+}
+
+.container{
+   width: 94%;
+   overflow-x: auto;
 }

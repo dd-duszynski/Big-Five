@@ -3,7 +3,7 @@
 .ScorersRowLight,
 .ScorersRowDark {
 	@include roboto400;
-	@include scorersRowGridColumn;
+	@include scorersRowGrid;
 	width: 94%;
 	height: 40px;
 	padding: 4px;
@@ -33,3 +33,4 @@
 .ScorersRowDark {
 	background-color: $bgc-dark;
 }
+
