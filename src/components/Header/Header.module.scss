@@ -9,6 +9,7 @@
    height: 80px;
    min-height: 80px;
    position: relative;
+   z-index: 2;
 }
 
 .headerLight {
@@ -25,7 +26,6 @@
    font-size: 4.2rem;
    color: white;
    cursor: pointer;
-
    &:hover {
       color: $bgc-light-lighter;
    }
@@ -61,8 +61,13 @@
       justify-content: space-between;
       align-items: center;
    }
+
    .home {
       font-size: 3rem;
       margin-left: 4vw;
+
+      &:hover {
+         color: #fff;
+      }
    }
 }

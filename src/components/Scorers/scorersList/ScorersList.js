@@ -8,7 +8,6 @@ import Pagination from "../../Pagination/Pagination";
 
 const ScorersList = ({ scorers, league }) => {
 	const [page, setPage] = useState(1);
-	console.log(scorers);
 	const lastElement = page * 10;
 	const firstElement = lastElement - 10;
 

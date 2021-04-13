@@ -17,7 +17,7 @@ const Header = () => {
    }
 
    const smallDevice = (
-      <HamburgerMenu onClick={isDrawerOpenHandler} isDrawerOpen={isDrawerOpen}/>
+      <HamburgerMenu onClick={isDrawerOpenHandler} isDrawerOpen={isDrawerOpen} />
    )
 
    const largeDevice = (
@@ -57,13 +57,15 @@ const Header = () => {
       </nav>
    )
    return (
-      <header className={css}>
-         <Link to="/">
-            <h1 className={styles.home}>BIG FIVE</h1>
-         </Link>
-         {size > 1000 ? largeDevice : smallDevice}
-         {isDrawerOpen && <Drawer isDrawerOpenHandler={isDrawerOpenHandler} />}
-      </header>
+      <>
+         <header className={css}>
+            <Link to="/">
+               <h1 className={styles.home}>BIG FIVE</h1>
+            </Link>
+            {size > 1000 ? largeDevice : smallDevice}
+         </header>
+         <Drawer isDrawerOpenHandler={isDrawerOpenHandler} isDrawerOpen={isDrawerOpen} />
+      </>
    );
 };
 

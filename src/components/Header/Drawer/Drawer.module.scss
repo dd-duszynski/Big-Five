@@ -5,22 +5,57 @@
    position: absolute;
    top: 80px;
    width: 100%;
-   z-index: 2;
    padding-bottom: 15px;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
+   height: 40vh;
+   transition: all .8s;
+   z-index: 1;
+}
+
+.open {
+   transform: translateY(0);
+   opacity: 1s;
+}
+
+.closed {
+   transform: translateY(-500px);
+   opacity: 0.9;
 }
 
 .DrawerLight {
    background-color: $bgc-light;
+
+   .link {
+      color: #fff;
+      border: 1px solid #fff;
+   }
 }
 
 .DrawerDark {
    background-color: $bgc-dark;
+
+   .link {
+      background-color: $bgc-dark-lighter
+   }
 }
 
+.link {
+   color: #fff;
+   font-size: 15px;
+   width: 80%;
+   height: 50px;
+   text-align: center;
+   line-height: 50px;
+   border-radius: 8px;
+   margin-bottom: 8px;
+
+   &:hover {
+      cursor: pointer;
+   }
+}
 
 @media(min-width: $brakepoint) {
 

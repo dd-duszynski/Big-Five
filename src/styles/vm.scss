@@ -41,12 +41,12 @@ $brakepoint: 1000px;
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: 40px 200px repeat(7, minmax(65px, 1fr)) minmax(
+	grid-template-columns: 40px 200px repeat(7, minmax(72px, 1fr)) minmax(
 			140px,
 			1fr
 		);
 	width: 100%;
-	min-width: 859px;
+	min-width: 908px;
 }
 
 @mixin scorersRowGrid {
@@ -61,8 +61,8 @@ $brakepoint: 1000px;
 	min-width: 557px;
 }
 
-@mixin resultsRowGridColumn {
+@mixin resultsRowGrid {
 	display: grid;
 	justify-items: center;
-	grid-template-columns: 40% 20% 40%;
+	grid-template-columns: 44% 12% 44%;
 }

@@ -3,7 +3,7 @@
 .ResultsRowLight,
 .ResultsRowDark {
 	@include roboto400;
-	@include resultsRowGridColumn;
+	@include resultsRowGrid;
 	width: 94%;
 	height: 40px;
 	padding: 4px;
