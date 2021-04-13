@@ -29,8 +29,8 @@ const ScorersList = ({ scorers, league }) => {
 			<div className={styles.container}>
 				<ScorersRowHeader />
 				{scorersToShow ? (
-					scorersToShow.map((item) => (
-						<ScorersRow key={item.player.name} player={item} />
+					scorersToShow.map((item, id) => (
+						<ScorersRow key={item.player.name} player={item} position={id + 1}/>
 					))
 				) : (
 					<Spinner />
