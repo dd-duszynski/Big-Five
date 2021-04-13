@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/big-five/static/css/main.ca5ab02e.chunk.css",
-    "main.js": "/big-five/static/js/main.a97d2459.chunk.js",
-    "main.js.map": "/big-five/static/js/main.a97d2459.chunk.js.map",
+    "main.css": "/big-five/static/css/main.a116b40a.chunk.css",
+    "main.js": "/big-five/static/js/main.ab4f8c79.chunk.js",
+    "main.js.map": "/big-five/static/js/main.ab4f8c79.chunk.js.map",
     "runtime-main.js": "/big-five/static/js/runtime-main.878fe04e.js",
     "runtime-main.js.map": "/big-five/static/js/runtime-main.878fe04e.js.map",
-    "static/js/2.a9ab7088.chunk.js": "/big-five/static/js/2.a9ab7088.chunk.js",
-    "static/js/2.a9ab7088.chunk.js.map": "/big-five/static/js/2.a9ab7088.chunk.js.map",
+    "static/js/2.6c865f60.chunk.js": "/big-five/static/js/2.6c865f60.chunk.js",
+    "static/js/2.6c865f60.chunk.js.map": "/big-five/static/js/2.6c865f60.chunk.js.map",
     "index.html": "/big-five/index.html",
-    "static/css/main.ca5ab02e.chunk.css.map": "/big-five/static/css/main.ca5ab02e.chunk.css.map",
-    "static/js/2.a9ab7088.chunk.js.LICENSE.txt": "/big-five/static/js/2.a9ab7088.chunk.js.LICENSE.txt",
+    "static/css/main.a116b40a.chunk.css.map": "/big-five/static/css/main.a116b40a.chunk.css.map",
+    "static/js/2.6c865f60.chunk.js.LICENSE.txt": "/big-five/static/js/2.6c865f60.chunk.js.LICENSE.txt",
     "static/media/LaLiga.7068b76b.png": "/big-five/static/media/LaLiga.7068b76b.png",
     "static/media/Ligue1.aa320750.png": "/big-five/static/media/Ligue1.aa320750.png",
     "static/media/SerieA.e64e8622.png": "/big-five/static/media/SerieA.e64e8622.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.878fe04e.js",
-    "static/js/2.a9ab7088.chunk.js",
-    "static/css/main.ca5ab02e.chunk.css",
-    "static/js/main.a97d2459.chunk.js"
+    "static/js/2.6c865f60.chunk.js",
+    "static/css/main.a116b40a.chunk.css",
+    "static/js/main.ab4f8c79.chunk.js"
   ]
 }
