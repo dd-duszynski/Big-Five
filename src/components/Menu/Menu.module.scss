@@ -3,6 +3,7 @@
 .menuLight,
 .menuDark {
    @include mainSectionHeight;
+   overflow-y: auto;
    grid-column: 1/2;
    position: relative;
    width: 240px;

@@ -37,22 +37,28 @@ $brakepoint: 1000px;
 	user-select: none;
 }
 
-@mixin tableRowGridColumn {
+@mixin tableRowGrid {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: 60px 200px repeat(7, 72px) 130px;
+	grid-template-columns: 40px 200px repeat(7, minmax(65px, 1fr)) minmax(
+			140px,
+			1fr
+		);
+	width: 100%;
+	min-width: 859px;
 }
 
 @mixin scorersRowGrid {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: 60px 200px 60px 1fr 1fr;
-   @media screen and (max-width: 800px) {
-      grid-template-columns: 60px 150px 60px 150px 150px;
-      color: red;
-   }
+	grid-template-columns: 60px minmax(150px, 200px) 60px minmax(140px, 1fr) minmax(
+			140px,
+			1fr
+		);
+	width: 100%;
+	min-width: 557px;
 }
 
 @mixin resultsRowGridColumn {

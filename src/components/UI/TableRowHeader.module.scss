@@ -3,8 +3,7 @@
 .miniTableHeadingLight,
 .miniTableHeadingDark {
 	@include roboto700;
-	@include tableRowGridColumn;
-	width: 100%;
+	@include tableRowGrid;
 	height: 35px;
 	padding: 4px;
 	margin-bottom: 4px;

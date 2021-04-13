@@ -3,7 +3,7 @@ import styles from "./TableList.module.scss";
 import TableRow from "../../UI/TableRow";
 import TableRowHeader from "../../UI/TableRowHeader";
 import MainBar from "../../MainBar/MainBar";
-import useSort from "../../../hooks/useSort";
+import {useSort} from "../../../hooks/useSort";
 
 const TableList = ({ scores, league }) => {
 	const [arrayToShow, sortBy, setSortBy, sortWay, setSortWay] = useSort(

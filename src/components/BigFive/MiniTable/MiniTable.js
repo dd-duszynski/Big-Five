@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./MiniTable.module.scss";
 import TableRow from "../../UI/TableRow";
 import TableRowHeader from "../../UI/TableRowHeader";
-import useSort from "../../../hooks/useSort";
+import {useSort} from "../../../hooks/useSort";
 
 const MiniTable = ({ scores }) => {
 	const [arrayToShow, sortBy, setSortBy, sortWay, setSortWay] = useSort( scores, 5);

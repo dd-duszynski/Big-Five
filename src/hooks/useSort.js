@@ -22,7 +22,7 @@ const sortHandler = (arr, sortBy, sortWay) => {
 	return initialArr;
 };
 
-const useSort = (scores, limit) => {
+export const useSort = (scores, limit) => {
 	const spliceLimit = limit
 		? limit
 		: scores.results.standings[0].table.length;
@@ -53,4 +53,27 @@ const useSort = (scores, limit) => {
 	return [arrayToShow, sortBy, setSortBy, sortWay, setSortWay];
 };
 
-export default useSort;
+
+// export const useSortScorers = (scores) => {
+// 	const arr = scores.results.standings[0].table.slice(0, spliceLimit);
+// 	const [arrayToShow, setArrayToShow] = useState(arr);
+// 	const [sortBy, setSortBy] = useState("position");
+// 	const [sortWay, setSortWay] = useState({
+// 		numberOfGoals: "desc",
+// 		playerName: "desc",
+// 		playedAge: "asc",
+// 		nationality: "asc",
+// 		teamName: "asc",
+// 	});
+
+// 	useEffect(() => {
+// 		setArrayToShow(sortHandler(arr, sortBy, sortWay));
+// 		setSortBy("position");
+// 	}, [scores]);
+
+// 	useEffect(() => {
+// 		setArrayToShow(sortHandler(arrayToShow, sortBy, sortWay));
+// 	}, [sortBy, sortWay]);
+
+// 	return [arrayToShow, sortBy, setSortBy, sortWay, setSortWay];
+// };
