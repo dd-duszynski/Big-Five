@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/context";
 import styles from "./ScorersRow.module.scss";
+import { nationalityTranslator } from "../Util/nationalityTranslator"
 
 const ageCalculator = (date) => {
    const difference = Date.now() - date;
@@ -9,21 +10,32 @@ const ageCalculator = (date) => {
 };
 
 const ScorersRow = ({ player, position }) => {
-   const { theme } = useContext(AppContext);
+   const { theme, language } = useContext(AppContext);
    const themeItem =
       theme === "light" ? styles.ScorersRowLight : styles.ScorersRowDark;
 
    const birth = Date.parse(player.player.dateOfBirth);
    const age = ageCalculator(birth);
    const imgSrc = "https://crests.football-data.org/";
+   
+   let nationality
+
+   if (language === "PL") {
+      nationality = nationalityTranslator(player.player.nationality)
+   } else {
+      nationality = player.player.nationality
+   }
+
    return (
       <div className={themeItem}>
+         <span>{player.position}</span>
+         {/* <span>{position}</span> */}
          <span>{player.numberOfGoals}</span>
          <span>{player.player.name}</span>
          <span>{age}</span>
-         <span>{player.player.nationality}</span>
+         <span>{nationality}</span>
          <span>
-         <img src={`${imgSrc}${player.team.id}.svg`} alt="logo"/>
+            <img src={`${imgSrc}${player.team.id}.svg`} alt="logo" />
             {player.team.name}
          </span>
       </div>

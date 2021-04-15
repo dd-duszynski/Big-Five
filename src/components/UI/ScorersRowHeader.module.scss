@@ -2,30 +2,30 @@
 
 .ScorersRowHeaderLight,
 .ScorersRowHeaderDark {
-	@include roboto700;
+   @include roboto700;
    @include scorersRowGrid;
-	height: 34px;
-	padding: 4px;
-	margin-bottom: 4px;
-	border-radius: 6px;
+   height: 34px;
+   padding: 4px;
+   margin-bottom: 4px;
+   border-radius: 6px;
 
-	span {
-		font-size: 1.3rem;
-		text-align: center;
-	}
+   span {
+      font-size: 1.3rem;
+      text-align: center;
+   }
 
-	span:nth-child(2),
-	span:nth-child(4),
-	span:nth-child(5) {
-		justify-self: start;
-		padding-left: 10px;
-	}
+   span:nth-child(3),
+   span:nth-child(5),
+   span:nth-child(6) {
+      justify-self: start;
+      padding-left: 10px;
+   }
 }
 
 .ScorersRowHeaderLight {
-	background-color: $bgc-light;
+   background-color: $bgc-light;
 }
 
 .ScorersRowHeaderDark {
-	background-color: $bgc-dark;
+   background-color: $bgc-dark;
 }

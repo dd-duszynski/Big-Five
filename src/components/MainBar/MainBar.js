@@ -3,7 +3,7 @@ import { AppContext } from "../../context/context";
 import styles from "./MainBar.module.scss";
 import Flags from "../UI/Flags";
 import Arrow from "../UI/Arrow";
-import { RiArrowUpSLine } from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 const MainBar = ({
    league,
@@ -84,7 +84,7 @@ const MainBar = ({
             )}
 
          </div>
-         {!noClick && <RiArrowUpSLine className={cssIcon} />}
+         {!noClick && <RiArrowDownSLine className={cssIcon} />}
       </div>
    )
 }

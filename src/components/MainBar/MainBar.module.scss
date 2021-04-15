@@ -34,10 +34,12 @@
       @include roboto700;
       font-size: 14px;
       margin: 0 10px;
-      &:hover{
+
+      &:hover {
          cursor: pointer;
       }
-      &:focus{
+
+      &:focus {
          outline: none;
       }
    }
@@ -69,10 +71,12 @@
 .header {
    font-size: 16px;
 }
-.roundsContainer{
+
+.roundsContainer {
    display: flex;
    align-items: center;
 }
+
 .label {
    font-size: 16px;
    margin-left: 8px;
@@ -90,10 +94,12 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   &:hover{
+
+   &:hover {
       cursor: pointer;
       background-color: green;
    }
+
    .arrowIcon {
       width: 18px;
       height: 18px;
@@ -115,16 +121,18 @@
    transform: rotate(180deg);
 }
 
-@media(max-width: 500px){
+@media(max-width: 500px) {
    .headerBox {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
    }
-   .roundsContainer{
+
+   .roundsContainer {
       margin-top: 8px;
    }
+
    .label {
       margin-left: 0;
    }

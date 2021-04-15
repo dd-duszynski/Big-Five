@@ -2,45 +2,44 @@
 
 .ScorersRowLight,
 .ScorersRowDark {
-	@include roboto400;
-	@include scorersRowGrid;
-	height: 40px;
-	padding: 4px;
-	margin-bottom: 4px;
-	border-radius: 6px;
+   @include roboto400;
+   @include scorersRowGrid;
+   height: 40px;
+   padding: 4px;
+   margin-bottom: 4px;
+   border-radius: 6px;
 
-	&:hover {
-		background-color: green;
-	}
+   &:hover {
+      background-color: green;
+   }
 
-	span {
-		font-size: 1.3rem;
+   span {
+      font-size: 1.3rem;
       display: flex;
-		align-items: center;
+      align-items: center;
+   }
 
-	}
+   span:nth-child(3),
+   span:nth-child(5),
+   span:nth-child(6) {
+      justify-self: start;
+      padding-left: 10px;
+   }
 
-	span:nth-child(2),
-	span:nth-child(4),
-	span:nth-child(5) {
-		justify-self: start;
-		padding-left: 10px;
-	}
    img {
-		width: 30px;
-		height: 30px;
-		background-color: #fff;
-		padding: 1px;
-		border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      padding: 1px;
+      border-radius: 50%;
       margin-right: 10px;
-	}
+   }
 }
 
 .ScorersRowLight {
-	background-color: $bgc-light;
+   background-color: $bgc-light;
 }
 
 .ScorersRowDark {
-	background-color: $bgc-dark;
+   background-color: $bgc-dark;
 }
-

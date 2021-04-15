@@ -53,12 +53,12 @@ $brakepoint: 1000px;
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: 60px minmax(150px, 200px) 60px minmax(140px, 1fr) minmax(
-			140px,
+	grid-template-columns: 60px 60px minmax(150px, 200px) 60px minmax(140px, 1fr) minmax(
+			200px,
 			1fr
 		);
 	width: 100%;
-	min-width: 557px;
+	min-width: 680px;
 }
 
 @mixin resultsRowGrid {
