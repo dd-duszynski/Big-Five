@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getMatches } from "../../api/footballApi";
+import { getResults } from "../../api/footballApi";
 import { LEAGUES } from "../../content/LEAGUES";
 import ResultsList from "./ResultsList/ResultsList";
 import Spinner from "../UI/Spinner";
@@ -14,7 +14,7 @@ const Results = (props) => {
 	}, [props.match.params.id]);
 
 	const loadData = () => {
-		getMatches(props.match.params.id).then((results) => {
+		getResults(props.match.params.id).then((results) => {
 			const matchDays = results.matches.reduce((matchDays, match) => {
 				matchDays[match.matchday] = true;
 				return matchDays;

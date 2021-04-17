@@ -2,69 +2,69 @@
 
 .MainSwitchLight,
 .MainSwitchDark {
-	grid-column: 2/3;
-	position: relative;
-	height: 100%;
-	min-height: calc(100vh - 80px);
-	overflow-y: auto;
-	overflow-x: auto;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
+   grid-column: 2/3;
+   position: relative;
+   height: 100%;
+   min-height: calc(100vh - 80px);
+   overflow-y: auto;
+   overflow-x: auto;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
 }
 
 .MainSwitchLight {
-	background-color: $bgc-light-lighter;
+   background-color: rgba(5, 175, 175, 0.85);
 }
 
 .MainSwitchDark {
-	background-color: $bgc-dark-lighter;
+   background-color: rgba(50, 50, 50, 0.85);
 }
 
 .imgContainer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
 }
 
 .backgroundImage {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	content: "";
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	opacity: 0.03;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   content: "";
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   opacity: 0.3;
 }
 
 .img1 {
-	background-image: url("../../../src/assets/img/img1.jpg");
+   background-image: url("../../../src/assets/img/img1.jpg");
 }
 
 .img2 {
-	background-image: url("../../../src/assets/img/img2.jpg");
+   background-image: url("../../../src/assets/img/img2.jpg");
 }
 
 .img3 {
-	background-image: url("../../../src/assets/img/img3.jpg");
+   background-image: url("../../../src/assets/img/img3.jpg");
 }
 
 .img4 {
-	background-image: url("../../../src/assets/img/img4.jpg");
+   background-image: url("../../../src/assets/img/img4.jpg");
 }
 
 .img5 {
-	background-image: url("../../../src/assets/img/img5.jpg");
+   background-image: url("../../../src/assets/img/img5.jpg");
 }
 
 .img6 {
-	background-image: url("../../../src/assets/img/img6.jpg");
+   background-image: url("../../../src/assets/img/img6.jpg");
 }
 
 .img7 {
-	background-image: url("../../../src/assets/img/img7.jpg");
+   background-image: url("../../../src/assets/img/img7.jpg");
 }

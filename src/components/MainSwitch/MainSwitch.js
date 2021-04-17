@@ -10,54 +10,48 @@ import Scorers from "../Scorers/Scorers";
 import { AppContext } from "../../context/context";
 
 const MainSwitch = () => {
-	const [imageIndex, setImageIndex] = useState(0);
+   const [imageIndex, setImageIndex] = useState(0);
 
-	const { theme } = useContext(AppContext);
+   const { theme } = useContext(AppContext);
 
-	const getRandom = (min, max) => {
-		let nr = Math.round(Math.random() * (max - min));
-		setImageIndex(nr);
-	};
+   const getRandom = (min, max) => {
+      let nr = Math.round(Math.random() * (max - min));
+      setImageIndex(nr);
+   };
 
-	useEffect(() => {
-		getRandom(0, 6);
-	}, []);
+   useEffect(() => {
+      getRandom(0, 6);
+   }, []);
 
-	const img = [
-		styles.img1,
-		styles.img2,
-		styles.img3,
-		styles.img4,
-		styles.img5,
-		styles.img6,
-		styles.img7,
-	];
+   const img = [
+      styles.img1,
+      styles.img2,
+      styles.img3,
+      styles.img4,
+      styles.img5,
+      styles.img6,
+      styles.img7,
+   ];
 
-	let css;
-	theme === "light"
-		? (css = styles.MainSwitchLight)
-		: (css = styles.MainSwitchDark);
+   let css;
+   theme === "light" ? (css = styles.MainSwitchLight) : (css = styles.MainSwitchDark);
 
-	return (
-		<div className={css}>
-			<Switch>
-				<Route exact path="/" component={BigFive} />
-				<Route path="/settings" component={Settings} />
-				<Route path="/info" component={Info} />
-				<Route path="/table/:id" component={Table} />
-				<Route path="/results/:id" component={Results} />
-				<Route path="/scorers/:id" component={Scorers} />
-				<Route component={BigFive} />
-			</Switch>
-			<div className={styles.imgContainer}>
-				<img
-					className={[img[imageIndex], styles.backgroundImage].join(
-						" "
-					)}
-				/>
-			</div>
-		</div>
-	);
+   return (
+      <div className={css}>
+         <Switch>
+            <Route path="/settings" component={Settings} />
+            <Route path="/info" component={Info} />
+            <Route path="/table/:id" component={Table} />
+            <Route path="/results/:id" component={Results} />
+            <Route path="/scorers/:id" component={Scorers} />
+            <Route path="/" component={BigFive} />
+            <Route component={BigFive} />
+         </Switch>
+         <div className={styles.imgContainer}>
+            <img className={[img[imageIndex], styles.backgroundImage].join(" ")} />
+         </div>
+      </div>
+   );
 };
 
 export default MainSwitch;

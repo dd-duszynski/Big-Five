@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getStandings } from "../../api/footballApi";
+import { getTable } from "../../api/footballApi";
 import { LEAGUES } from "../../content/LEAGUES";
 import TableList from "./TableList/TableList";
 import Spinner from "../UI/Spinner";
@@ -11,7 +11,7 @@ const Table = (props) => {
 	}, [props.match.params.id]);
 
 	const loadData = () => {
-		getStandings(props.match.params.id).then((results) =>
+		getTable(props.match.params.id).then((results) =>
 			setResults({ results })
 		);
 	};
