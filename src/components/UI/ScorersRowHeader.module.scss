@@ -12,6 +12,12 @@
    span {
       font-size: 1.3rem;
       text-align: center;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+         cursor: pointer;
+      }
    }
 
    span:nth-child(3),
@@ -24,8 +30,20 @@
 
 .ScorersRowHeaderLight {
    background-color: $bgc-light;
+
+   span {
+      &:hover {
+         color: $bgc-light-lighter;
+      }
+   }
 }
 
 .ScorersRowHeaderDark {
    background-color: $bgc-dark;
+
+   span {
+      &:hover {
+         color: $bgc-light;
+      }
+   }
 }

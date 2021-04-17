@@ -1,0 +1,22 @@
+.iconBox {
+   background-color: green;
+   width: 16px;
+   height: 16px;
+   margin-left: 4px;
+}
+
+.arrowAsc,
+.arrowDesc {
+   width: 16px;
+   height: 16px;
+   color: #fff;
+   transition: transform 0.5s;
+}
+
+.arrowAsc {
+   transform: rotate(0);
+}
+
+.arrowDesc {
+   transform: rotate(180deg);
+}

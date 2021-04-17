@@ -9,7 +9,7 @@ const ageCalculator = (date) => {
    return Math.abs(age.getUTCFullYear() - 1970);
 };
 
-const ScorersRow = ({ player, position }) => {
+const ScorersRow = ({ player }) => {
    const { theme, language } = useContext(AppContext);
    const themeItem =
       theme === "light" ? styles.ScorersRowLight : styles.ScorersRowDark;
@@ -29,7 +29,6 @@ const ScorersRow = ({ player, position }) => {
    return (
       <div className={themeItem}>
          <span>{player.position}</span>
-         {/* <span>{position}</span> */}
          <span>{player.numberOfGoals}</span>
          <span>{player.player.name}</span>
          <span>{age}</span>

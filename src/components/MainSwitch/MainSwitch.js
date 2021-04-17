@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import styles from "./MainSwitch.module.scss";
 import BigFive from "../BigFive/BigFive";
 import Settings from "../Settings/Settings";
@@ -44,8 +44,8 @@ const MainSwitch = () => {
             <Route path="/table/:id" component={Table} />
             <Route path="/results/:id" component={Results} />
             <Route path="/scorers/:id" component={Scorers} />
-            <Route path="/" component={BigFive} />
-            <Route component={BigFive} />
+            <Route exact path="/" component={BigFive} />
+            <Redirect to="/" />
          </Switch>
          <div className={styles.imgContainer}>
             <img className={[img[imageIndex], styles.backgroundImage].join(" ")} />

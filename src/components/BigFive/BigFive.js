@@ -5,8 +5,7 @@ import MiniTable from "./MiniTable/MiniTable";
 import { getTable } from "../../api/footballApi";
 import { AppContext } from "../../context/context";
 import MainBar from "../MainBar/MainBar";
-import SmallDeviceMiniTable from "./SmallDeviceMiniTable/SmallDeviceMiniTable";
-import Spinner from "../UI/Spinner";
+import SmallDeviceNavigation from "./SmallDeviceNavigation/SmallDeviceNavigation";
 
 const League = ({ league, expanded, onToggle, theme, isSmallDevice }) => {
    const [results, setResults] = useState(null);
@@ -32,7 +31,7 @@ const League = ({ league, expanded, onToggle, theme, isSmallDevice }) => {
             choosen={expanded}
          />
          {expanded && isSmallDevice ? (
-            <SmallDeviceMiniTable league={league} />
+            <SmallDeviceNavigation league={league} />
          ) : null}
          { expanded && <MiniTable scores={results} league={league} />}
       </>
