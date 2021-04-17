@@ -1,4 +1,4 @@
-import {token} from "./SECRET"
+import { token } from "./SECRET"
 
 const options = {
    headers: { "X-Auth-Token": token }
@@ -9,7 +9,8 @@ const fetchJsonFromAPI = url => {
    if (responseCache[url]) {
       return Promise.resolve(responseCache[url]);
    }
-   return fetch("https://api.football-data.org/v2/" + url, options)
+   return fetch("https://big-five-server.herokuapp.com/" + url)
+      // return fetch("https://api.football-data.org/v2/" + url, options)
       .then(res => res.json())
       .then(res => {
          responseCache[url] = res;
@@ -18,14 +19,14 @@ const fetchJsonFromAPI = url => {
 };
 
 export const getStandings = id => {
-   return fetchJsonFromAPI(`competitions/${id}/standings`);
+   return fetchJsonFromAPI(`table/${id}`);
 };
 
-export const getMatches = (id, matchday) => {
-   const url = matchday ? `competitions/${id}/matches?matchday=${matchday}` : `competitions/${id}/matches`;
+export const getMatches = (id) => {
+   const url = `results/${id}`;
    return fetchJsonFromAPI(url);
 };
 
 export const getScorers = id => {
-   return fetchJsonFromAPI(`competitions/${id}/scorers?limit=50`);
+   return fetchJsonFromAPI(`scorers/${id}`);
 };

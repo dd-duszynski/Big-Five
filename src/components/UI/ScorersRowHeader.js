@@ -13,11 +13,11 @@ const ScorersRowHeader = () => {
 	return (
 		<div className={themeHeading}>
 			<span>#</span>
-			<span>{textContent.scorers[1]}</span>
-			<span>{textContent.scorers[2]}</span>
-			<span>{textContent.scorers[3]}</span>
-			<span>{textContent.scorers[4]}</span>
-			<span>{textContent.scorers[5]}</span>
+			<span>{textContent.scorers.goals}</span>
+			<span>{textContent.scorers.player}</span>
+			<span>{textContent.scorers.age}</span>
+			<span>{textContent.scorers.nationality}</span>
+			<span>{textContent.scorers.team}</span>
 		</div>
 	);
 };

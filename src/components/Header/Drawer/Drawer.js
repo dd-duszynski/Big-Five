@@ -17,7 +17,7 @@ const Drawer = ({ isDrawerOpen, isDrawerOpenHandler }) => {
             exact
             to="/"
          >
-            {textContent.navigation[3]}
+              {textContent.navigation.home}
          </NavLink>
 
          <NavLink
@@ -27,7 +27,7 @@ const Drawer = ({ isDrawerOpen, isDrawerOpenHandler }) => {
             exact
             to="/settings"
          >
-            {textContent.navigation[4]}
+             {textContent.navigation.setting}
          </NavLink>
 
          <NavLink
@@ -37,8 +37,7 @@ const Drawer = ({ isDrawerOpen, isDrawerOpenHandler }) => {
             exact
             to="/info"
          >
-
-            {textContent.navigation[5]}
+            {textContent.navigation.information}
          </NavLink>
       </nav >
    )

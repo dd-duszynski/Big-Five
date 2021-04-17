@@ -19,11 +19,11 @@ const Settings = () => {
       <div className={styles.Settings}>
          <div className={styles.container}>
             <h3 className={styles.header}>
-               {textContent.settings[0]}
+               {textContent.settings.language}
             </h3>
             <div className={styles.innerContainer}>
                <span className={styles.optionLeft}>
-                  {textContent.settings[1]}
+                  {textContent.settings.english}
                </span>
 
                <SwitchButton
@@ -33,17 +33,17 @@ const Settings = () => {
                />
 
                <span className={styles.optionRight}>
-                  {textContent.settings[2]}
+                  {textContent.settings.polish}
                </span>
             </div>
          </div>
          <div className={styles.line} />
 
          <div className={styles.container}>
-            <h3 className={styles.header}>{textContent.settings[3]}</h3>
+            <h3 className={styles.header}>{textContent.settings.color}</h3>
             <div className={styles.innerContainer}>
                <span className={styles.optionLeft}>
-                  {textContent.settings[4]}
+                  {textContent.settings.dark}
                </span>
                <SwitchButton
                   theme={theme}
@@ -51,7 +51,7 @@ const Settings = () => {
                   onClick={themeChangeHandler}
                />
                <span className={styles.optionRight}>
-                  {textContent.settings[5]}
+                  {textContent.settings.light}
                </span>
             </div>
          </div>

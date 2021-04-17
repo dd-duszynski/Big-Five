@@ -47,42 +47,42 @@ const TableRowHeader = ({ sortBy, sortWay, setSortBy, setSortWay }) => {
 	return (
 		<div className={themeHeading}>
 			<span onClick={() => clickHandler("position")}>
-				{textContent.table[0]}
+				{textContent.table.position}
 				{icon("position")}
 			</span>
 			<span onClick={() => clickHandler("teamName")}>
-				{textContent.table[1]}
+				{textContent.table.teamName}
 				{icon("teamName")}
 			</span>
 			<span onClick={() => clickHandler("playedGames")}>
-				{textContent.table[2]}
+				{textContent.table.playedGames}
 				{icon("playedGames")}
 			</span>
 			<span onClick={() => clickHandler("won")}>
-				{textContent.table[3]}
+				{textContent.table.won}
 				{icon("won")}
 			</span>
 			<span onClick={() => clickHandler("draw")}>
-				{textContent.table[4]}
+				{textContent.table.draw}
 				{icon("draw")}
 			</span>
 			<span onClick={() => clickHandler("lost")}>
-				{textContent.table[5]}
+				{textContent.table.lost}
 				{icon("lost")}
 			</span>
 			<span onClick={() => clickHandler("goalsFor")}>
-				{textContent.table[6]}
+				{textContent.table.goalsFor}
 				{icon("goalsFor")}
 			</span>
 			<span onClick={() => clickHandler("goalsAgainst")}>
-				{textContent.table[7]}
+				{textContent.table.goalsAgainst}
 				{icon("goalsAgainst")}
 			</span>
 			<span onClick={() => clickHandler("points")}>
-				{textContent.table[8]}
+				{textContent.table.points}
 				{icon("points")}
 			</span>
-			<span>{textContent.table[9]}</span>
+			<span>{textContent.table.form}</span>
 		</div>
 	);
 };

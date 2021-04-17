@@ -1,47 +1,55 @@
 const EN = {
-   navigation: [
-      "Results",
-      "Table",
-      "Scorers",
-      "Home",
-      "Settings",
-      "Information",
-   ],
-   settings: [
-      "Language:",
-      "English",
-      "Polish",
-      "Color theme:",
-      "Dark",
-      "Light",
-   ],
-   table: [
-      "#",
-      "Club",
-      "Played",
-      "Won",
-      "Drawn",
-      "Lost",
-      "Goals +",
-      "Goals -",
-      "Points",
-      "Form",
-      "W",
-      "D",
-      "L",
-   ],
-   results: ["Results", "Round:", "Home", "Result", "Away"],
-   scorers: ["Scorers", "Goals", "Player", "Age", "Nationality", "Team"],
-   info: [
-      "database: football-data.org",
-      "mail: dd.duszynski@gmail.com",
-      "linkedin: dd-duszynski",
-   ],
-   links: [
-      "https://www.football-data.org",
-      "mailto:dd.duszynski@gmail.com",
-      "https://www.linkedin.com/in/dd-duszynski",
-   ],
+   navigation: {
+      results: "Results",
+      table: "Table",
+      scorers: "Scorers",
+      home: "Home",
+      setting: "Settings",
+      information: "Information"
+   },
+   settings: {
+      language: "Language",
+      english: "English",
+      polish: "Polish",
+      color: "Color theme",
+      dark: "Dark",
+      light: "Light",
+   },
+   table: {
+      position: "#",
+      teamName: "Club",
+      playedGames: "Played",
+      won: "Won",
+      draw: "Draw",
+      lost: "Lost",
+      goalsFor: "Goals +",
+      goalsAgainst: "Goals -",
+      points: "Points",
+      form: "Form",
+      winShort: "W",
+      drawShort: "D",
+      lostShort: "L"
+   },
+   results: {
+      results: "Results",
+      round: "Round",
+      home: "Home",
+      result: "Result",
+      away: "Away",
+   },
+   scorers: {
+      scorers: "Scorers",
+      goals: "Goals",
+      player: "Player",
+      age: "Age",
+      nationality: "Nationality",
+      team: "Team"
+   },
+   info: {
+      database: ["database: football-data.org", "https://www.football-data.org"],
+      mail: ["mail: dd.duszynski@gmail.com", "mailto:dd.duszynski@gmail.com"],
+      linkedin: ["linkedin: dd-duszynski", "https://www.linkedin.com/in/dd-duszynski"]
+   },
 };
 
 export default EN;

@@ -30,7 +30,7 @@ const Header = () => {
                   exact
                   to="/"
                >
-                  {textContent.navigation[3]}
+                  {textContent.navigation.home}
                </NavLink>
             </li>
             <li>
@@ -40,7 +40,7 @@ const Header = () => {
                   exact
                   to="/settings"
                >
-                  {textContent.navigation[4]}
+                  {textContent.navigation.setting}
                </NavLink>
             </li>
             <li>
@@ -50,7 +50,7 @@ const Header = () => {
                   exact
                   to="/info"
                >
-                  {textContent.navigation[5]}
+                  {textContent.navigation.information}
                </NavLink>
             </li>
          </ul>

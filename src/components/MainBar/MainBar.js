@@ -50,7 +50,7 @@ const MainBar = ({
                      className={styles.label}
                      htmlFor="round-select"
                   >
-                     {textContent.results[1]}
+                     {textContent.results.results}
                   </label>
                   <Arrow
                      onClick={() => arrowClickHandler("left")}

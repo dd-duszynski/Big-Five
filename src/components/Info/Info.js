@@ -12,34 +12,34 @@ const Info = () => {
          <li className={styles.infoItem}>
             <a
                className={styles.link}
-               href={textContent.links[0]}
+               href={textContent.info.database[1]}
                target="_blank"
                rel="noreferrer"
             >
                <FaDatabase className={styles.icon} />
-               {textContent.info[0]}
+               {textContent.info.database[0]}
             </a>
          </li>
          <div className={styles.line} />
          <li className={styles.infoItem}>
             <a
                className={styles.link}
-               href={textContent.links[1]}
+               href={textContent.info.mail[1]}
             >
                <MdMail className={styles.icon} />
-               {textContent.info[1]}
+               {textContent.info.mail[0]}
             </a>
          </li>
          <div className={styles.line} />
          <li className={styles.infoItem}>
             <a
                className={styles.link}
-               href={textContent.links[2]}
+               href={textContent.info.linkedin[1]}
                target="_blank"
                rel="noreferrer"
             >
                <FaLinkedin className={styles.icon} />
-               {textContent.info[2]}
+               {textContent.info.linkedin[0]}
             </a>
          </li>
       </ul>

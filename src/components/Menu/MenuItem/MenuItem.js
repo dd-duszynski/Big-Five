@@ -6,7 +6,7 @@ import Flags from "../../UI/Flags";
 
 const MenuItem = ({ id, league }) => {
    const { textContent } = useContext(AppContext);
-   
+
    return (
       <ul className={styles.MenuItem}>
          <li className={[styles.listItem, styles.headerBox].join(" ")}>
@@ -22,7 +22,7 @@ const MenuItem = ({ id, league }) => {
                to={`/results/${id}`}
             >
                <span className={styles.icon_vs} />
-               {textContent.navigation[0]}
+               {textContent.navigation.results}
             </NavLink>
          </li>
 
@@ -34,7 +34,7 @@ const MenuItem = ({ id, league }) => {
                to={`/table/${id}`}
             >
                <span className={styles.icon_tab} />
-               {textContent.navigation[1]}
+               {textContent.navigation.table}
             </NavLink>
          </li>
 
@@ -46,7 +46,7 @@ const MenuItem = ({ id, league }) => {
                to={`/scorers/${id}`}
             >
                <span className={styles.icon_stat} />
-               {textContent.navigation[2]}
+               {textContent.navigation.scorers}
             </NavLink>
          </li>
       </ul>

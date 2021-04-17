@@ -12,9 +12,9 @@ const ResultsRowHeader = () => {
 
 	return (
 		<div className={themeHeading}>
-			<span>{textContent.results[2]}</span>
-			<span>{textContent.results[3]}</span>
-			<span>{textContent.results[4]}</span>
+			<span>{textContent.results.home}</span>
+			<span>{textContent.results.result}</span>
+			<span>{textContent.results.away}</span>
 		</div>
 	);
 };
