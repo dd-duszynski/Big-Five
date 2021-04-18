@@ -6,8 +6,8 @@ import { getTable } from "../../api/footballApi";
 import { AppContext } from "../../context/context";
 import MainBar from "../MainBar/MainBar";
 import SmallDeviceNavigation from "./SmallDeviceNavigation/SmallDeviceNavigation";
-
-const League = ({ league, expanded, onToggle, theme, isSmallDevice }) => {
+import Spinner from '../UI/Spinner'
+const League = ({ league, expanded, onToggle, theme, isSmallDevice, }) => {
    const [results, setResults] = useState(null);
 
    const loadData = () => {
@@ -16,10 +16,12 @@ const League = ({ league, expanded, onToggle, theme, isSmallDevice }) => {
 
    useEffect(() => {
       loadData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
 
    if (!results) {
-      return null;
+      return <Spinner />;
+      // return null;
    }
 
    return (
@@ -49,7 +51,6 @@ const BigFive = () => {
          setExpandedTab(tabId);
       }
    };
-
    return (
       <div className={styles.big5}>
          {LEAGUES.map((item) => (

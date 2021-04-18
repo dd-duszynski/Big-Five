@@ -48,7 +48,7 @@ const MainSwitch = () => {
             <Redirect to="/" />
          </Switch>
          <div className={styles.imgContainer}>
-            <img className={[img[imageIndex], styles.backgroundImage].join(" ")} />
+            <img className={[img[imageIndex], styles.backgroundImage].join(" ")} alt="football"/>
          </div>
       </div>
    );

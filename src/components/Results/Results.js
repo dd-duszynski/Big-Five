@@ -11,6 +11,7 @@ const Results = (props) => {
 
    useEffect(() => {
       loadData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [props.match.params.id]);
 
    const loadData = () => {
@@ -21,7 +22,7 @@ const Results = (props) => {
          // }, {});
          // const matchDaysRounds = Object.keys(matchDays).sort((a, b) => a - b);
          const matchDays = results.matches.reduce((prevValue, currentValue) => {
-            if (prevValue.find(item => item == currentValue.matchday)) {
+            if (prevValue.find(item => item === currentValue.matchday)) {
                return prevValue
             } else {
                prevValue.push(currentValue.matchday)

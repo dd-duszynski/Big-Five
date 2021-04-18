@@ -23,10 +23,12 @@ export const useSort = (scores, limit) => {
    useEffect(() => {
       setArrayToShow(sortHandler(arr, sortBy, sortWay));
       setSortBy("position");
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [scores]);
 
    useEffect(() => {
       setArrayToShow(sortHandler(arrayToShow, sortBy, sortWay));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [sortBy, sortWay]);
 
    return [arrayToShow, sortBy, setSortBy, sortWay, setSortWay];

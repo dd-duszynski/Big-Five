@@ -32,11 +32,13 @@ const ScorersList = ({ scorers, league }) => {
    useEffect(() => {
       setArrayToShow(sortHandler(scorersWithAdditionalKeys, sortBy, sortWay, language));
       setSortBy("position");
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [scorers]);
 
    useEffect(() => {
       setArrayToShow(sortHandler(scorersWithAdditionalKeys, sortBy, sortWay, language));
       setPage(1)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [sortBy, sortWay]);
 
    const lastElement = page * 10;
