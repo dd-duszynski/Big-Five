@@ -1,4 +1,4 @@
-export const sortHandler = (arr, sortBy, sortWay) => {
+export const sortHandler = (arr, sortBy, sortWay, lang) => {
    const initialArr = [...arr];
    if (sortBy === "teamName") {
       if (sortWay[sortBy] === "asc") {
@@ -21,14 +21,26 @@ export const sortHandler = (arr, sortBy, sortWay) => {
          });
       }
    } else if (sortBy === "nationality") {
-      if (sortWay[sortBy] === "asc") {
-         initialArr.sort((a, b) => {
-            return ("" + b.player.nationality).localeCompare(a.player.nationality);
-         });
-      } else {
-         initialArr.sort((a, b) => {
-            return ("" + a.player.nationality).localeCompare(b.player.nationality);
-         });
+      if (lang === "EN") {
+         if (sortWay[sortBy] === "asc") {
+            initialArr.sort((a, b) => {
+               return ("" + b.player.nationality).localeCompare(a.player.nationality);
+            });
+         } else {
+            initialArr.sort((a, b) => {
+               return ("" + a.player.nationality).localeCompare(b.player.nationality);
+            });
+         }
+      } else if (lang === "PL") {
+         if (sortWay[sortBy] === "asc") {
+            initialArr.sort((a, b) => {
+               return ("" + b.player.nationalityPL).localeCompare(a.player.nationalityPL);
+            });
+         } else {
+            initialArr.sort((a, b) => {
+               return ("" + a.player.nationalityPL).localeCompare(b.player.nationalityPL);
+            });
+         }
       }
    } else if (sortBy === "goals") {
       initialArr.sort((a, b) => {

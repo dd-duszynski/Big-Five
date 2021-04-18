@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { AppContext } from "../../../context/context";
 import styles from "./ScorersList.module.scss";
 import Spinner from "../../UI/Spinner";
 import ScorersRow from "../../UI/ScorersRow";
@@ -6,8 +7,10 @@ import ScorersRowHeader from "../../UI/ScorersRowHeader";
 import MainBar from "../../MainBar/MainBar";
 import Pagination from "../../Pagination/Pagination";
 import { sortHandler } from "../../Util/ScorersSortHandler"
+import { nationalityTranslator } from "../../Util/nationalityTranslator"
 
 const ScorersList = ({ scorers, league }) => {
+   const { language } = useContext(AppContext);
    const [arrayToShow, setArrayToShow] = useState(null);
    const [page, setPage] = useState(1);
    const [sortBy, setSortBy] = useState("position");
@@ -20,16 +23,19 @@ const ScorersList = ({ scorers, league }) => {
       teamName: "asc"
    });
 
-   const scorersWithPosition = [...scorers];
-   scorersWithPosition.forEach((el, ind) => el.position = ind + 1)
+   const scorersWithAdditionalKeys = [...scorers];
+   scorersWithAdditionalKeys.forEach((el, ind) => {
+      el.position = ind + 1
+      el.player.nationalityPL = nationalityTranslator(el.player.nationality)
+   })
 
    useEffect(() => {
-      setArrayToShow(sortHandler(scorersWithPosition, sortBy, sortWay));
+      setArrayToShow(sortHandler(scorersWithAdditionalKeys, sortBy, sortWay, language));
       setSortBy("position");
    }, [scorers]);
 
    useEffect(() => {
-      setArrayToShow(sortHandler(scorersWithPosition, sortBy, sortWay));
+      setArrayToShow(sortHandler(scorersWithAdditionalKeys, sortBy, sortWay, language));
       setPage(1)
    }, [sortBy, sortWay]);
 
@@ -59,11 +65,11 @@ const ScorersList = ({ scorers, league }) => {
             />
             {scorersToShow ? (
                scorersToShow.map((item, id) => (
-                  <ScorersRow key={item.player.name} player={item} />
+                  <ScorersRow key={`${item.player.name}-${id}`} player={item} />
                ))
             ) : (
-                  <Spinner />
-               )}
+               <Spinner />
+            )}
          </div>
          <Pagination
             currentPage={page}
@@ -75,57 +81,3 @@ const ScorersList = ({ scorers, league }) => {
    );
 };
 export default ScorersList;
-
-
-
-
-// import React, { useState } from "react";
-// import styles from "./ScorersList.module.scss";
-// import Spinner from "../../UI/Spinner";
-// import ScorersRow from "../../UI/ScorersRow";
-// import ScorersRowHeader from "../../UI/ScorersRowHeader";
-// import MainBar from "../../MainBar/MainBar";
-// import Pagination from "../../Pagination/Pagination";
-
-// const ScorersList = ({ scorers, league }) => {
-//    const [page, setPage] = useState(1);
-
-//    const lastElement = page * 10;
-//    const firstElement = lastElement - 10;
-//    const scorersWithPosition = [...scorers];
-//    scorersWithPosition.forEach((el, ind) => el.position = ind + 1)
-//    let scorersToShow;
-//    if (scorers && page === 1) {
-//       scorersToShow = scorersWithPosition.filter((_, id) => id < page * 10);
-//    } else if (scorers && page > 1) {
-//       scorersToShow = scorersWithPosition.filter((_, id) => id >= firstElement && id < lastElement);
-//    }
-
-
-//    const paginate = (pageNr) => {
-//       setPage(pageNr);
-//    };
-
-//    return (
-//       <div className={styles.scorers}>
-//          <MainBar league={league} noClick />
-//          <div className={styles.container}>
-//             <ScorersRowHeader/>
-//             {scorersToShow ? (
-//                scorersToShow.map((item, id) => (
-//                   <ScorersRow key={item.player.name} player={item} position={id + 1} />
-//                ))
-//             ) : (
-//                   <Spinner />
-//                )}
-//          </div>
-//          <Pagination
-//             currentPage={page}
-//             elementsPerPage={10}
-//             allElements={scorers.length}
-//             paginate={paginate}
-//          />
-//       </div>
-//    );
-// };
-// export default ScorersList;

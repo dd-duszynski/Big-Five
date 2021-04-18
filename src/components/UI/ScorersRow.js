@@ -1,13 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/context";
 import styles from "./ScorersRow.module.scss";
-import { nationalityTranslator } from "../Util/nationalityTranslator"
-
-const ageCalculator = (date) => {
-   const difference = Date.now() - date;
-   const age = new Date(difference);
-   return Math.abs(age.getUTCFullYear() - 1970);
-};
+import { ageCalculator } from "../Util/ageCalculator"
 
 const ScorersRow = ({ player }) => {
    const { theme, language } = useContext(AppContext);
@@ -17,11 +11,10 @@ const ScorersRow = ({ player }) => {
    const birth = Date.parse(player.player.dateOfBirth);
    const age = ageCalculator(birth);
    const imgSrc = "https://crests.football-data.org/";
-   
-   let nationality
 
+   let nationality
    if (language === "PL") {
-      nationality = nationalityTranslator(player.player.nationality)
+      nationality = player.player.nationalityPL
    } else {
       nationality = player.player.nationality
    }
