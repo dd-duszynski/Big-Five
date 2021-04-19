@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./MenuItem.module.scss";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AppContext } from "../../../context/context";
 import Flags from "../../UI/Flags";
 
@@ -9,10 +9,15 @@ const MenuItem = ({ id, league }) => {
 
    return (
       <ul className={styles.MenuItem}>
-         <li className={[styles.listItem, styles.headerBox].join(" ")}>
-            <Flags id={id} />
-            <h2 className={styles.header}>{league}</h2>
-         </li>
+         <Link
+            to={`/table/${id}`}
+            className={[styles.listItem, styles.headerBox].join(" ")}
+         >
+            <li>
+               <Flags id={id} />
+               <h2 className={styles.header}>{league}</h2>
+            </li>
+         </Link>
 
          <li className={styles.listItem}>
             <NavLink

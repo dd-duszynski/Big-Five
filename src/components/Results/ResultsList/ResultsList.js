@@ -4,7 +4,7 @@ import Spinner from "../../UI/Spinner";
 import MainBar from "../../MainBar/MainBar";
 import ResultsRowHeader from "../../UI/ResultsRowHeader";
 import ResultsRow from "../../UI/ResultsRow";
-
+import LinkToHome from "../../UI/LinkToHome";
 const ResultsList = ({ matches, league, onRoundChange, rounds, round }) => {
    const [isLoaded, setIsLoaded] = useState(false);
    const [matchesToShow, setMatchesToShow] = useState(
@@ -29,6 +29,7 @@ const ResultsList = ({ matches, league, onRoundChange, rounds, round }) => {
          {matchesToShow.map((item, index) => {
             return <ResultsRow key={`matchrow_${index}`} result={item} />;
          })}
+         <LinkToHome />
       </div>
    ) : (
       <Spinner />

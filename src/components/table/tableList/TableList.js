@@ -4,6 +4,7 @@ import TableRow from "../../UI/TableRow";
 import TableRowHeader from "../../UI/TableRowHeader";
 import MainBar from "../../MainBar/MainBar";
 import { useSort } from "../../../hooks/useSort";
+import LinkToHome from "../../UI/LinkToHome";
 
 const TableList = ({ scores, league }) => {
    const [arrayToShow, sortBy, setSortBy, sortWay, setSortWay] = useSort(
@@ -28,6 +29,7 @@ const TableList = ({ scores, league }) => {
                />
             ))}
          </div>
+         <LinkToHome />
       </div>
    );
 };

@@ -50,6 +50,7 @@ const PL = {
       mail: ["mail: dd.duszynski@gmail.com", "mailto:dd.duszynski@gmail.com"],
       linkedin: ["linkedin: dd-duszynski", "https://www.linkedin.com/in/dd-duszynski"]
    },
+   backToHome: "Powrót na stronę główną"
 };
 
 export default PL;

@@ -50,6 +50,7 @@ const EN = {
       mail: ["mail: dd.duszynski@gmail.com", "mailto:dd.duszynski@gmail.com"],
       linkedin: ["linkedin: dd-duszynski", "https://www.linkedin.com/in/dd-duszynski"]
    },
+   backToHome: "Back to homepage"
 };
 
 export default EN;

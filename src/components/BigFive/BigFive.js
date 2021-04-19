@@ -21,7 +21,6 @@ const League = ({ league, expanded, onToggle, theme, isSmallDevice, }) => {
 
    if (!results) {
       return <Spinner />;
-      // return null;
    }
 
    return (

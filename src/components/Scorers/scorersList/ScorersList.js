@@ -4,6 +4,7 @@ import styles from "./ScorersList.module.scss";
 import Spinner from "../../UI/Spinner";
 import ScorersRow from "../../UI/ScorersRow";
 import ScorersRowHeader from "../../UI/ScorersRowHeader";
+import LinkToHome from "../../UI/LinkToHome";
 import MainBar from "../../MainBar/MainBar";
 import Pagination from "../../Pagination/Pagination";
 import { sortHandler } from "../../Util/ScorersSortHandler"
@@ -79,6 +80,7 @@ const ScorersList = ({ scorers, league }) => {
             allElements={scorers.length}
             paginate={paginate}
          />
+         <LinkToHome />
       </div>
    );
 };
