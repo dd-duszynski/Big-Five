@@ -2,78 +2,84 @@
 
 .miniTableItemLight,
 .miniTableItemDark {
-	@include roboto400;
-	@include tableRowGrid;
-	height: 40px;
-	padding: 4px;
-	margin-bottom: 4px;
-	border-radius: 6px;
+  @include roboto400;
+  @include tableRowGrid;
+  height: 40px;
+  padding: 4px;
+  margin-bottom: 4px;
+  border-radius: 6px;
 
-	img {
-		width: 30px;
-		height: 30px;
-		margin-right: 10px;
-		background-color: #fff;
-		padding: 1px;
-		border-radius: 50%;
-	}
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #fff;
+    padding: 1px;
+    border-radius: 50%;
+  }
 
-	span {
-		font-size: 1.3rem;
-	}
+  span {
+    font-size: 1.3rem;
+  }
 
-	span:nth-child(2) {
-		justify-self: start;
-		align-items: center;
-		display: flex;
-		padding-left: 10px;
-	}
+  span:nth-child(2) {
+    justify-self: start;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+  }
 }
 
 .miniTableItemLight {
-	background-color: $bgc-light;
-	.win {
-		background-color: rgb(49, 177, 49);
-	}
-	.draw {
-		background-color: rgb(207, 156, 25);
-	}
-	.lose {
-		background-color: rgb(190, 42, 42);
-	}
+  background-color: $bgc-light;
+
+  .win {
+    background-color: rgb(49, 177, 49);
+  }
+
+  .draw {
+    background-color: rgb(207, 156, 25);
+  }
+
+  .lose {
+    background-color: rgb(190, 42, 42);
+  }
 }
 
 .miniTableItemDark {
-	background-color: $bgc-dark;
+  background-color: $bgc-dark;
 }
 
 .miniTableItemLight:hover,
 .miniTableItemDark:hover {
-	background-color: green;
+  background-color: green;
 }
 
 .formBox {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .win,
 .draw,
 .lose {
-	width: 17px;
-	height: 17px;
-	margin-right: 3px;
-	border-radius: 4px;
-	font-size: 11px;
-	line-height: 19px;
-	text-align: center;
+  width: 17px;
+  height: 17px;
+  margin-right: 3px;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 19px;
+  text-align: center;
 }
+
 .win {
-	background-color: rgb(49, 177, 49);
+  background-color: rgb(49, 177, 49);
 }
+
 .draw {
-	background-color: rgb(207, 156, 25);
+  background-color: rgb(207, 156, 25);
 }
+
 .lose {
-	background-color: rgb(190, 42, 42);
+  background-color: rgb(190, 42, 42);
 }

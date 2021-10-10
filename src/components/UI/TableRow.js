@@ -3,56 +3,35 @@ import { AppContext } from "../../context/context";
 import styles from "./TableRow.module.scss";
 
 const TableRow = ({ scores, position }) => {
-   const { theme, textContent } = useContext(AppContext);
+  const { theme } = useContext(AppContext);
 
-   let themeItem;
-   if (theme === "light") {
-      themeItem = styles.miniTableItemLight;
-   } else {
-      themeItem = styles.miniTableItemDark;
-   }
-   const last5games = scores[position].form.split(",");
+  let themeItem;
+  if (theme === "light") {
+    themeItem = styles.miniTableItemLight;
+  } else {
+    themeItem = styles.miniTableItemDark;
+  }
 
-   return (
-      <div className={themeItem}>
-         <span>{scores[position].position}</span>
-         <span>
-            <img src={scores[position].team.crestUrl} alt="logo" />
-            {scores[position].team.name}
-         </span>
-         <span>{scores[position].playedGames}</span>
-         <span>{scores[position].won}</span>
-         <span>{scores[position].draw}</span>
-         <span>{scores[position].lost}</span>
-         <span>
-            {scores[position].goalsFor}
-         </span>
-         <span>
-            {scores[position].goalsAgainst}
-         </span>
-         <span>{scores[position].points}</span>
-         <div className={styles.formBox}>
-            {last5games.map((item, index) => {
-               let css, text;
-               if (item === "W") {
-                  css = styles.win;
-                  text = textContent.table.winShort;
-               } else if (item === "D") {
-                  css = styles.draw;
-                  text = textContent.table.drawShort;
-               } else {
-                  css = styles.lose;
-                  text = textContent.table.lostShort;
-               }
-               return (
-                  <div className={css} key={index}>
-                     {text}
-                  </div>
-               );
-            })}
-         </div>
-      </div>
-   );
+  return (
+    <div className={themeItem}>
+      <span>{scores[position].position}</span>
+      <span>
+        <img src={scores[position].team.crestUrl} alt="logo" />
+        {scores[position].team.name}
+      </span>
+      <span>{scores[position].playedGames}</span>
+      <span>{scores[position].won}</span>
+      <span>{scores[position].draw}</span>
+      <span>{scores[position].lost}</span>
+      <span>
+        {scores[position].goalsFor}
+      </span>
+      <span>
+        {scores[position].goalsAgainst}
+      </span>
+      <span>{scores[position].points}</span>
+    </div>
+  );
 };
 
 export default TableRow;
